@@ -1,2 +1,9 @@
 # grupo_2_JujuyTurismo
-Somos una empresa jujeña dedicada a ofrecer servicios distintos paquetes de turismo dentro de la provincia para poder explorar distintos puntos turisticos de la misma. Nuestro publico objetivo son toda persona que se encuentren dentro de la provincia y que deseen vivir la experiencia de pasear por jujuy.
+Somos TurisJu, una empresa jujeña dedicada a ofrecer servicios de turismo dentro de la provincia, estos incluyen excursiones o tours guiados por los distintos sitios turisticos que posee la misma. 
+El público al que apuntamos será toda persona que se encuentren en Jujuy y tenga el deseo de concocer y explorar nuestra querida provincia.
+En una primera instancia la oferta incluirá destinos tipicos como ser las salinas grandes , san salvador de jujuy etc y a medida que nuestra empresa crezca buscaremos aumentar las opciones  para ofrecerles a los clientes. Siempre apuntando a la mejora de nuestro servicio en calidad y variedad.
+
+INTEGRANTES DEL GRUPO:
+Alejandra Yazmin Choque
+Buenas, soy alejandra. Mis amigos me llaman aleja, soy estudiante en la facultad de ciencias ecónomicas.
+Actualmente vivo en la ciudad del carmen con mis padres, hermanos y abuela. Antes nunca habia visto cosas relacionadas a la programación pero me parece interesante y entretenido. 
