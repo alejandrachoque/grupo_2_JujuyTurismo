@@ -7,3 +7,5 @@ INTEGRANTES DEL GRUPO:
 Alejandra Yazmin Choque
 Buenas, soy alejandra. Mis amigos me llaman aleja, soy estudiante en la facultad de ciencias ecónomicas.
 Actualmente vivo en la ciudad del carmen con mis padres, hermanos y abuela. Antes nunca habia visto cosas relacionadas a la programación pero me parece interesante y entretenido. 
+Apaza, Ezequiel Oscar Miguel
+Soy estudiante de la facultad de ingenieria. Actualmente vivo en Palpalá y el contacto con la programacion que tuve fue gracias a la carrera, que aun estoy cursando, de diseño integral en videojuegos
