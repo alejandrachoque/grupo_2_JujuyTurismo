@@ -16,3 +16,6 @@ Buenas, soy alejandra. Mis amigos me llaman aleja, soy estudiante en la facultad
 Actualmente vivo en la ciudad del carmen con mis padres, hermanos y abuela. Antes nunca habia visto cosas relacionadas a la programación pero me parece interesante y entretenido. 
 Apaza, Ezequiel Oscar Miguel
 Soy estudiante de la facultad de ingenieria. Actualmente vivo en Palpalá y el contacto con la programacion que tuve fue gracias a la carrera, que aun estoy cursando, de diseño integral en videojuegos
+
+Tomas Alejandro Quispe
+Hola, soy estudiante de la facultad de ingenieria y estudiante de desarrollo de software, actualmente vivo en la ciudad de palpala y me avoque a estudiar programacion durante todo este año, de momento ya finalice el Argentina programa 3.0 y ahora aspiro a ser fullstack.
