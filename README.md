@@ -19,3 +19,6 @@ Soy estudiante de la facultad de ingenieria. Actualmente vivo en Palpalá y el c
 
 Tomas Alejandro Quispe
 Hola, soy estudiante de la facultad de ingenieria y estudiante de desarrollo de software, actualmente vivo en la ciudad de palpala y me avoque a estudiar programacion durante todo este año, de momento ya finalice el Argentina programa 3.0 y ahora aspiro a ser fullstack.
+
+Nicole Mendivil Cabrera
+Hola, vivo en San Salvador de Jujuy y soy estudiante de la carrera diseño integral de videojuegos. Me parece interesante la programacion 
