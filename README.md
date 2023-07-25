@@ -3,6 +3,8 @@ Somos TurisJu, una empresa jujeña dedicada a ofrecer servicios de turismo dentr
 El público al que apuntamos será toda persona que se encuentren en Jujuy y tenga el deseo de concocer y explorar nuestra querida provincia.
 En una primera instancia la oferta incluirá destinos tipicos como ser las salinas grandes , san salvador de jujuy etc y a medida que nuestra empresa crezca buscaremos aumentar las opciones  para ofrecerles a los clientes. Siempre apuntando a la mejora de nuestro servicio en calidad y variedad.
 
+
+
 INTEGRANTES DEL GRUPO:
 Alejandra Yazmin Choque
 Buenas, soy alejandra. Mis amigos me llaman aleja, soy estudiante en la facultad de ciencias ecónomicas.
