@@ -3,7 +3,12 @@ Somos TurisJu, una empresa jujeña dedicada a ofrecer servicios de turismo dentr
 El público al que apuntamos será toda persona que se encuentren en Jujuy y tenga el deseo de concocer y explorar nuestra querida provincia.
 En una primera instancia la oferta incluirá destinos tipicos como ser las salinas grandes , san salvador de jujuy etc y a medida que nuestra empresa crezca buscaremos aumentar las opciones  para ofrecerles a los clientes. Siempre apuntando a la mejora de nuestro servicio en calidad y variedad.
 
-
+Sitios de referencia: 
+https://www.argentina.tur.ar/#!/ar/home   -- Una estetica interesante
+https://turismo.buenosaires.gob.ar/es  -- La estructura bastante atractiva
+https://www.welcomeargentina.com/   -- Por los servicios que ofrece
+https://www.caviahuetours.com/  --  Apunta los productos a sus clientes de una manera similar a la que proyectamos
+https://www.seabreezemykonos.com/  --  Una estetica hipnotizante
 
 INTEGRANTES DEL GRUPO:
 Alejandra Yazmin Choque
