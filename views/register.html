@@ -8,7 +8,26 @@
 </head>
 <body>
     <main id="form">
-        <h1>Registraté</h1>
+        <h1>Registráte</h1>
+        <form action="/register" method="post">
+            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+            <label for="Nombre"></label>
+
+            <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+            <label for="Apellido"></label>
+
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <label for="email"></label>
+
+            <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña">
+            <label for="contraseña"></label>
+
+            <button type="submit">Registráte</button>
+
+            <label>Ya eres miembro?</label>
+            <a href="/login">Ingresá</a>
+
+        </form>
         
     </main>
     
