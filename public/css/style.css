@@ -1,0 +1,14 @@
+/*formulario de registro*/
+*{
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+main #form{
+    display: flex;
+    flex-direction: column;
+}
+form #registro{
+    display: flex;
+    flex-direction: column;
+}
