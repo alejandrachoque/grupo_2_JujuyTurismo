@@ -76,6 +76,26 @@ div.log{
         box-shadow: 0px 0px 10px rgb(174, 169, 169);
         background-color: white;
 }
+
+}
+@media (max-width:479px){
+    main#form h1.mensaje{
+        display: none;
+    }
+    main#login h1.mensaje2{
+        display: none;
+    }
+    main#form{
+        background-color: white;
+    }
+    main#login{
+        background-color: white;
+    }
+}
+main#form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 /*formulario de login*/
 
@@ -122,58 +142,60 @@ form#logs input{
     */
     body{
         font-family: Arial, Helvetica, sans-serif;
-        background-image: url('./images/jujuy.jpg');
+        background-color:lightslategray;
         background-size: cover;
+    }
+    main#login div.log h1{
+        text-align: center;
     }
     main#login{
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 100vw;
         height: 100vh;
-        justify-content: center;
     }
     form#logs{
-        
-        display: flex;
-        flex-direction:column ;
-        align-items: center;
-        justify-content: center;
-        height: 222px;
-    }
-    div.log{
-        
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        padding: 66px 21px;
-        
-    }
-    form#logs input {
-        padding: 11px;
-        border-bottom: 1px solid;
-        margin: 12px;
-        width: 70vw;
-        max-width: 300px;
     }
     form#logs button{
         background-color: black;
-        color: white;
+        color:white;
+        padding: 4px;
         width: 70vw;
         max-width: 300px;
-        margin: 12px;
-        padding: 2px;
     }
-    form#logs button:hover{
-        background-color: rgb(167, 160, 160);
-        color: black;
-    }
-    
-    body{
-        background: lightcyan}
-
-   input#recordar{
-            width: auto;
+    form#logs input[type=email]{
+        border-bottom : 1px solid;
+        margin-bottom: 12px ;
+        text-align: left;
+        width: 70vw;
+        max-width: 300px;
+        padding: 12px;
+            
+        
         }
+        form#logs input[type=password]{
+            border-bottom : 1px solid;
+            margin-bottom: 12px ;
+            text-align: left;
+            width: 70vw;
+            max-width: 300px;
+            padding: 12px;
+                
+            
+            }
+            form#logs input[type=checkbox]{
+            margin: 10px;
+
+            }
+            form#logs button:hover{
+                background-color: rgb(167, 160, 160);
+                color: black;
+            }
+            main#login{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-around;
+            }
