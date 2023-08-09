@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formuario de registro</title>
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
     <main id="form">
+        <div class="regitr">
         <h1>Registráte</h1>
-        <form action="/register" method="post">
+        <form action="/register" method="post" id="registro">
             <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
             <label for="Nombre"></label>
 
@@ -19,16 +21,16 @@
             <input type="email" name="email" id="email" placeholder="E-mail">
             <label for="email"></label>
 
-            <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña">
+            <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" required>
             <label for="contraseña"></label>
 
             <button type="submit">Registráte</button>
 
-            <label>Ya eres miembro?</label>
-            <a href="/login">Ingresá</a>
+            <label class="frase">Ya tienes una cuenta?</label>
+            <a href="/login">Inicia sesión</a>
 
         </form>
-        
+        </div>
     </main>
     
 </body>

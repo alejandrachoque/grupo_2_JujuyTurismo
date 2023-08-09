@@ -1,0 +1,179 @@
+/*formulario de registro*/
+*{
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*div.regitr{
+    border: 1px solid;
+    border-radius: 11px;
+    padding: 99px 44px;
+
+}*/
+
+main#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+main#form h1{
+    margin: 12px;
+    text-align: center;
+}
+form#registro label.frase{
+    padding: 4px;
+}
+form#registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form#registro input{
+    border-bottom : 1px solid;
+    margin-bottom: 12px ;
+    text-align: left;
+    width: 70vw;
+    max-width: 300px;
+    padding: 12px;
+    
+
+}
+form#registro input:focus{
+    border-bottom: 1px solid rgb(71, 71, 156);
+    outline: none; 
+    border-bottom-color: #9ecaed; 
+    box-shadow: 0 0 10px #9ecaed;
+
+
+}
+form#registro button{
+    background-color: black;
+    color:white;
+    padding: 4px;
+    width: 70vw;
+    max-width: 300px;
+}
+form#registro button:hover{
+    background-color: rgb(167, 160, 160);
+    color: black;
+}
+@media(min-width:480px){
+    div.regitr{
+        
+        border-radius: 11px;
+        padding: 66px 21px;
+        box-shadow: 0px 0px 10px rgb(174, 169, 169);
+        background-color: white;
+    }
+div.log{
+    border-radius: 11px;
+        padding: 66px 21px;
+        box-shadow: 0px 0px 10px rgb(174, 169, 169);
+        background-color: white;
+}
+}
+/*formulario de login*/
+
+/*div.log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+div.logs h1{
+    margin: 12px;
+}
+main#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+form#logs{
+    display: flex;
+    flex-direction: column;}
+form#logs input{
+    border-bottom : 1px solid;
+    margin-bottom: 12px ;
+    text-align: left;
+    width: 70vw;
+    max-width: 300px;
+    padding: 12px;
+        
+    
+    }
+    form#logs button{
+        background-color: black;
+        color:white;
+        padding: 4px;
+        width: 70vw;
+        max-width: 300px;
+    }
+    form#logs button:hover{
+        background-color: rgb(167, 160, 160);
+        color: black;
+    }
+    */
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('./images/jujuy.jpg');
+        background-size: cover;
+    }
+    main#login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+    }
+    form#logs{
+        
+        display: flex;
+        flex-direction:column ;
+        align-items: center;
+        justify-content: center;
+        height: 222px;
+    }
+    div.log{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding: 66px 21px;
+        
+    }
+    form#logs input {
+        padding: 11px;
+        border-bottom: 1px solid;
+        margin: 12px;
+        width: 70vw;
+        max-width: 300px;
+    }
+    form#logs button{
+        background-color: black;
+        color: white;
+        width: 70vw;
+        max-width: 300px;
+        margin: 12px;
+        padding: 2px;
+    }
+    form#logs button:hover{
+        background-color: rgb(167, 160, 160);
+        color: black;
+    }
+    
+    body{
+        background: lightcyan}
+
+   input#recordar{
+            width: auto;
+        }
