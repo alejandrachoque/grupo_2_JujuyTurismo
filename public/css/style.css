@@ -199,3 +199,9 @@ form#logs input{
                 flex-direction: row-reverse;
                 justify-content: space-around;
             }
+            body{
+                background-image: url("./images/jujuy.jpg");
+            }
+            main#form{
+                background-image: url(./images/jujuy.jpg);
+            }
