@@ -16,6 +16,10 @@ app.post('/register',(req,res)=>{
 app.get('/login',(req,res)=>{
     res.sendFile((path.resolve(__dirname, './views/login.html')))});
 
+app.get('/detalle',(req,res)=>{
+    res.sendFile((path.resolve(__dirname, './views/detalle.html')))});
+    
+
 app.post('/login',(req,res)=>{
         res.redirect('/')
     })

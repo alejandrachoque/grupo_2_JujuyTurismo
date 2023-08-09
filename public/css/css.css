@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+:root {
+  --verde: #219150;
+  --verde-claro: #219100;
+  --negro: #10221b;
+  --blanco: #fff;
+  --blanco-suave: #eee;
+  --border: 2px solid var(--negro);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: var(--blanco);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--negro);
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: var(--border);
+  color: var(--blanco-suave);
+  cursor: pointer;
+  background: none;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+}
+.btn:hover {
+  background: var(--negro);
+  color: var(--blanco);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: var(--blanco);
+  box-shadow: var(--box-shadow);
+}
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  color: var(--negro);
+  font-weight: bolder;
+}
+.header .logo i {
+  color: var(--verde);
+}
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: var(--negro);
+}
+.header .navbar a:hover {
+  color: var(--verde);
+}
+.header .navbar #nav-close {
+  font-size: 5rem;
+  cursor: pointer;
+  color: var(--negro);
+  display: none;
+}
+.header .iconos a,
+.header .iconos div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: var(--negro);
+}
+.header .iconos a:hover,
+.header .iconos div:hover {
+  color: var(--verde);
+}
+.header #menu-btn {
+  display: none;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transform: translateY(-110%);
+}
+.search-form.active {
+  transform: translateY(0%);
+}
+.search-form #close-search {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: var(--blanco);
+  font-size: 6rem;
+}
+.search-form #close-search:hover {
+  color: var(--verde);
+}
+.search-form form {
+  width: 70rem;
+  margin: 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--blanco);
+  display: flex;
+  align-items: center;
+}
+.search-form form input {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--blanco);
+  text-transform: none;
+  background: none;
+  padding-right: 2rem;
+}
+.search-form form input::-moz-placeholder {
+  color: #aaa;
+}
+.search-form form input::placeholder {
+  color: #aaa;
+}
+.search-form form label {
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--blanco);
+}
+.search-form form label:hover {
+  color: var(--verde);
+}
+
+.home {
+  padding: 0;
+}
+.home .box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: flex-end;
+  padding: 2rem 9%;
+}
+.home .box.second, .home .box.secondDetalle {
+  justify-content: flex-start;
+}
+.home .box .content {
+  width: 50rem;
+}
+.home .box .content span {
+  font-size: 4rem;
+  color: var(--blanco);
+  text-shadow: 2px 2px 2px var(--negro);
+}
+.home .box .content h3 {
+  font-size: 6rem;
+  color: var(--verde);
+  padding-top: 2rem;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px var(--negro);
+}
+.home .box .content h3 .pLetra {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: rgb(71, 181, 255);
+  text-shadow: 3px 3px 3px var(--negro);
+}
+.home .box .content h3 .sLetra {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: rgb(255, 99, 71);
+  text-shadow: 3px 3px 3px var(--negro);
+}
+.home .box .content h3 .tLetra {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: rgb(145, 57, 167);
+  text-shadow: 3px 3px 3px var(--negro);
+}
+.home .box .content h3 .cLetra {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: rgb(237, 255, 71);
+  text-shadow: 3px 3px 3px var(--negro);
+}
+.home .box .content h3 .qLetra {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: rgb(62, 78, 170);
+  text-shadow: 3px 3px 3px var(--negro);
+}
+.home .box .content p {
+  line-height: 1.5;
+  color: var(--blanco);
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  text-shadow: 1.5px 1.5px 2px var(--negro);
+}
+.home .box .content a {
+  text-shadow: 1.5px 1.5px 2px var(--negro);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 2rem;
+  color: var(--negro);
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .home .box {
+    padding: 2rem;
+    justify-content: center;
+    background-position: right !important;
+  }
+  .home .box.second, .home .box.secondDetalle {
+    justify-content: center;
+    background-position: left !important;
+  }
+  .home .box .content {
+    text-align: center;
+  }
+  .home .box .content span {
+    font-size: 3rem;
+  }
+  .home .box .content h3 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    background: var(--blanco);
+    z-index: 10000;
+    width: 35rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .navbar.active {
+    left: 0;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+  .header .navbar a {
+    margin: 1rem 0;
+    font-size: 3rem;
+  }
+  .header .navbar #nav-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .home .box.second, .home .box.secondDetalle {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}/*# sourceMappingURL=css.css.map */
+
+.home .box .content {
+  width: 50rem;
+}
+.home .box.secondDetalle {
+  justify-content: space-around;
+}
+.video{
+  width: 100%;
+  height: 300px;
+}
