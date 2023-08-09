@@ -4,11 +4,18 @@ const path= require('path');
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-const PORT= 3000;
+const PORT= 3030;
 
 app.listen(PORT,()=>console.log('Corriendo en el puerto: '+PORT));
 app.get('/register',(req,res)=>{
     res.sendFile(path.resolve(__dirname, './views/register.html'))});
+
 app.post('/register',(req,res)=>{
-    res.redirect('/');
+    res.redirect('/')
 })
+app.get('/login',(req,res)=>{
+    res.sendFile((path.resolve(__dirname, './views/login.html')))});
+
+app.post('/login',(req,res)=>{
+        res.redirect('/')
+    })
