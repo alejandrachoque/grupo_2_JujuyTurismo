@@ -22,3 +22,6 @@ Hola, soy estudiante de la facultad de ingenieria y estudiante de desarrollo de 
 
 Nicole Mendivil Cabrera
 Hola, vivo en San Salvador de Jujuy y soy estudiante de la carrera diseño integral de videojuegos. Me parece interesante la programacion 
+
+Enlace del tablero en Trello:
+https://trello.com/b/Q6fTRx2p/proyecto-g2
