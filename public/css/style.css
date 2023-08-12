@@ -156,11 +156,17 @@ form#logs input{
         color: black;
     }
     */
-    body{
+    body#reg{
        background:rgb(47, 105, 40);
        background-image: url(../images/Salinas-Grandes.jpg);
-       background-size:cover
+       background-size: cover
        ;
+    }
+
+
+    body#l{
+        background-image: url(../images/TURISMO-JUJUY.jpg);
+        background-repeat: round ;
     }
     main#login div.log h1{
         text-align: center;
