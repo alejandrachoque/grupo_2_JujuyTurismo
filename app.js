@@ -7,7 +7,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 const PORT= 3030;
 
 app.get('/',(req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/register.html'))});
+    res.sendFile(path.resolve(__dirname, './views/index.html'))});
 
 app.get('/detalle',(req,res)=>{
         res.sendFile(path.resolve(__dirname, './views/detalle.html'))});
@@ -24,10 +24,7 @@ app.post('/register',(req,res)=>{
 })
 app.get('/login',(req,res)=>{
     res.sendFile((path.resolve(__dirname, './views/login.html')))});
-
-app.get('/detalle',(req,res)=>{
-    res.sendFile((path.resolve(__dirname, './views/detalle.html')))});
-    
+ 
 
 app.post('/login',(req,res)=>{
         res.redirect('/')

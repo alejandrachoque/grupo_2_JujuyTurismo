@@ -240,6 +240,14 @@ form#logs input{
            main#form a:hover{
             color: blue;
            }
+           form#logs input:focus{
+            border-bottom: 1px solid rgb(71, 71, 156);
+            outline: none; 
+            border-bottom-color: #9ecaed; 
+            box-shadow: 0 0 10px #9ecaed;
+        
+        
+        }
             /*estilos de detalle html del header"*/
            
 
