@@ -12,3 +12,7 @@ app.get('/register',(req,res)=>{
 app.post('/register',(req,res)=>{
     res.redirect('/');
 })
+app.get('/home',(req,res)=>{
+    res.sendFile(path.resolve(__dirname, './index.html'))});
+app.get('/detalle',(req,res)=>{
+        res.sendFile(path.resolve(__dirname, './detalle.html'))});
