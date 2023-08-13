@@ -3,12 +3,14 @@ Restrospectiva
 Comenzar a hacer:
 Realizar encuentros , aumentar la comunicación, mejorar la planificacion.
 Hacer mas:
-proponer diversas ideas
+proponer diversas ideas.
+
 Seguir haciendo:
 no hay algo que este en un estado perfecto aun, asi que por ahora nada. 
 
 Hacer menos:
  no comunicarse 
+ 
 Dejar de hacer:
 dejar las tareas para ultimo momento.
 
