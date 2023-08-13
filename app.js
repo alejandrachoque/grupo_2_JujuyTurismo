@@ -6,6 +6,8 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 const PORT= 3030;
 
+app.set('view','ejs');
+app.set('views','./src/views');
 app.get('/',(req,res)=>{
     res.sendFile(path.resolve(__dirname, './views/index.html'))});
 
