@@ -13,7 +13,7 @@ app.get('/detalle',(req,res)=>{
         res.sendFile(path.resolve(__dirname, './views/detalle.html'))});
 
 app.get('/productos',(req,res)=>{
-            res.sendFile(path.resolve(__dirname, './views/carrito.html'))});
+            res.sendFile(path.resolve(__dirname, './views/carro.html'))});
         
 
 app.get('/register',(req,res)=>{
