@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de registro</title>
+    <title>Carro de compras</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/bccfa837a8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
 </head>
-<body id="reg">
-    <!-- seccion del header -->
-    <header class="header">
+<body id="carro">
+     <!-- seccion del header -->
+     <header class="header">
         <a href="#" class="logo"> <i class="fa-solid fa-mountain"></i> TurisJu</a>
 
         <nav class="navbar">
@@ -31,44 +30,41 @@
             <div id="search-btn" class="fas fa-search"></div>
         </div>
     </header>
-    <!-- seccion del header -->
 
-    <!-- seccion de boton de busqueda -->
-    <div class="search-form">
 
-        <div id="close-search" class="fas fa-times"></div>
 
-        <form action="">
-            <input type="search" name="" placeholder="Que estas buscando?...." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-    </div>
     <main id="form">
-        
-        <div class="regitr">
-                
-        
-        <h1>Registráte</h1>
-        <form action="/register" method="post" id="registro">
+        <div class="carro">
+        <h1>Carro de compras</h1>
+        <form action="/carro" method="post" id="carro">
+            <h2>Nombre</h2>
             <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
             <label for="Nombre"></label>
 
+            <h2>Apellido</h2>
             <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
             <label for="Apellido"></label>
 
-            <input type="email" name="email" id="email" placeholder="E-mail">
-            <label for="email"></label>
+            <h2>Correo Electronico</h2>
+            <input type="Correo Electronico" name="correo" id="correo" placeholder="Correo">
+            <label for="correo"></label>
 
-            <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" required>
-            <label for="contraseña"></label>
+            <h2>Contacto Telefonico</h2>
+            <input type="Contacto Telefonico" name="telefono" id="telefono" placeholder="Telefono">
+            <label for="telefono"></label>
 
-            <button type="submit">Registráte</button>
+            <h2>Comentarios</h2>
+            <input type="Comentarios" name="comentario" id="comentario" placeholder="Comentarios...">
+            <label for="comentarios"></label>
 
-            <label class="frase">Ya tienes una cuenta?</label>
-            <a href="/login">Inicia sesión</a>
+            <h2>Cantidad de personas</h2>
+            <input type="Cantidad" name="cantidad" id="cantidad" placeholder="Cantidad de personas...">
+            <label for="comentarios"></label>
+
+            <h2>Precio</h2>
+            <button type="submit">Comprar</button>
 
         </form>
-    
         </div>
     </main>
     
