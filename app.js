@@ -29,4 +29,12 @@ app.get('/login',(req,res)=>{
 app.post('/login',(req,res)=>{
         res.redirect('/')
     })
+
+app.get('/carro',(req,res)=>{
+    res.sendFile(path.resolve(__dirname, './views/carro.html'))
+});
+    
+app.post('/carro',(req,res)=>{
+    res.redirect('/')
+})
 app.listen(PORT,()=>console.log('Corriendo en el puerto: '+PORT));

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro de compras</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/bccfa837a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body id="carro">
+     <!-- seccion del header -->
+     <header class="header">
+        <a href="#" class="logo"> <i class="fa-solid fa-mountain"></i> TurisJu</a>
+
+        <nav class="navbar">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="#home">inicio</a>
+            <a href="#equipo">equipo</a>
+            <a href="#paquetes">paquetes</a>
+            <a href="#tienda">tienda</a>
+            <a href="#reseña">reseñas</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="iconos">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+    </header>
+
+
+
+    <main id="form">
+        <div class="carro">
+        <h1>Carro de compras</h1>
+        <form action="/carro" method="post" id="carro">
+            <h2>Nombre</h2>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+            <label for="Nombre"></label>
+
+            <h2>Apellido</h2>
+            <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+            <label for="Apellido"></label>
+
+            <h2>Correo Electronico</h2>
+            <input type="Correo Electronico" name="correo" id="correo" placeholder="Correo">
+            <label for="correo"></label>
+
+            <h2>Contacto Telefonico</h2>
+            <input type="Contacto Telefonico" name="telefono" id="telefono" placeholder="Telefono">
+            <label for="telefono"></label>
+
+            <h2>Comentarios</h2>
+            <input type="Comentarios" name="comentario" id="comentario" placeholder="Comentarios...">
+            <label for="comentarios"></label>
+
+            <h2>Cantidad de personas</h2>
+            <input type="Cantidad" name="cantidad" id="cantidad" placeholder="Cantidad de personas...">
+            <label for="comentarios"></label>
+
+            <h2>Precio</h2>
+            <button type="submit">Comprar</button>
+
+        </form>
+        </div>
+    </main>
+    
+</body>
+</html>
