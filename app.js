@@ -9,6 +9,8 @@ app.set('views','./src/views')
 
 const PORT= 3000;
 
+app.set('view','ejs');
+app.set('views','./src/views');
 app.get('/',(req,res)=>{
     res.sendFile(path.resolve(__dirname, './views/index.html'))});
 
