@@ -45,7 +45,7 @@ form#registro{
 }
 
 form#registro input{
-    border-bottom : 1px solid;
+    border : 1px solid;
     margin-bottom: 12px ;
     text-align: left;
     width: 70vw;
@@ -88,20 +88,18 @@ div.log{
         background-color: white;
         
 }
-
 }
-@media (max-width:479px){
-    main#form h1.mensaje{
-        display: none;
-    }
-    main#login h1.mensaje2{
-        display: none;
-    }
+
+@media (max-width:450px){
+  body:{
+font-size: 50%;
+  }
+
     main#form{
         background-color: #362b53
     }
     main#login{
-        background-color:#362b53 ;
+        background-color: transparent ;
     }
     main#form a{
         color: #fff;
@@ -113,49 +111,7 @@ main#form{
     flex-direction: row;
     justify-content: space-around;
 }
-/*formulario de login*/
-
-/*div.log{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-div.logs h1{
-    margin: 12px;
-}
-main#login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-}
-form#logs{
-    display: flex;
-    flex-direction: column;}
-form#logs input{
-    border-bottom : 1px solid;
-    margin-bottom: 12px ;
-    text-align: left;
-    width: 70vw;
-    max-width: 300px;
-    padding: 12px;
-        
-    
-    }
-    form#logs button{
-        background-color: black;
-        color:white;
-        padding: 4px;
-        width: 70vw;
-        max-width: 300px;
-    }
-    form#logs button:hover{
-        background-color: rgb(167, 160, 160);
-        color: black;
-    }
-    */
+/*formulario registro*/
     body#reg{
        background:rgb(47, 105, 40);
        background-image: url(../images/Salinas-Grandes.jpg);
@@ -166,7 +122,7 @@ form#logs input{
 
     body#l{
         background-image: url(../images/TURISMO-JUJUY.jpg);
-        background-repeat: round ;
+        background-size: cover ;
     }
     main#login div.log h1{
         text-align: center;
@@ -262,12 +218,20 @@ form#logs input{
             body img{
               width: 100px;
             }
-        body{
+        /*body{
           background-image: url(../images/Jujuy678.png);
           background-repeat: repeat;
 
-        }
+        }*/
+        @media (max-width:768px){
 
+        }
+        @media (max-width:991px){
+
+        }
+        @media (max-width:1200px){
+
+        }
 :root {
   --verde: #219150;
   --verde-claro: #219100;
@@ -572,6 +536,9 @@ section {
   html {
     font-size: 50%;
   }
+  
+
+
 }/*# sourceMappingURL=css.css.map */
 
 .home .box .content {
