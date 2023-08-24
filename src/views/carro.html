@@ -37,31 +37,35 @@
         <div class="carro">
         <h1>Carro de compras</h1>
         <form action="/carro" method="post" id="carro">
-            <h2>Nombre</h2>
+            <p>Datos del usuario</p>
             <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
             <label for="Nombre"></label>
 
-            <h2>Apellido</h2>
             <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
             <label for="Apellido"></label>
 
-            <h2>Correo Electronico</h2>
-            <input type="Correo Electronico" name="correo" id="correo" placeholder="Correo">
+            <input type="email" name="correo" id="correo" placeholder="Correo Electrónico">
             <label for="correo"></label>
 
-            <h2>Contacto Telefonico</h2>
-            <input type="Contacto Telefonico" name="telefono" id="telefono" placeholder="Telefono">
+            <input type="number" name="telefono" id="telefono" placeholder="Teléfono">
             <label for="telefono"></label>
+            
+            <p>Datos de la reserva</p>
+            <label>Fecha de reserva: </label>
+            <input type="date" name="fecha">
 
-            <h2>Comentarios</h2>
-            <input type="Comentarios" name="comentario" id="comentario" placeholder="Comentarios...">
-            <label for="comentarios"></label>
+            <label>Cantidad de personas: </label>
+            <input type="number" name="cantidad-personas" id="cantidad" placeholder="Cantidad de personas">
+            
+            <label>Método de pago: </label>
+            <select name="medio-pago">
+                <option value="1">Efectivo</option>
+                <option value="2">Transferencia</option>
+                <option value="3">Débito</option>
+                <option value="3">Tarjeta de crédito</option>
+            </select>
 
-            <h2>Cantidad de personas</h2>
-            <input type="Cantidad" name="cantidad" id="cantidad" placeholder="Cantidad de personas...">
-            <label for="comentarios"></label>
-
-            <h2>Precio</h2>
+            <textarea name="comentario" id="comentario">Comentarios...</textarea>
             <button type="submit">Comprar</button>
 
         </form>
