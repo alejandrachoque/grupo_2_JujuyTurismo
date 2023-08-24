@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRoutes = require("./src/routes/mainRoutes")
+const mainRoutes = require("./src/routers/mainRoutes")
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const PORT = 3030;
+
+app.set("view engine", "ejs")
 
 app.set('view', 'ejs');
 app.set('views', './src/views');
