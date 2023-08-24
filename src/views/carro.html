@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
+
 <body id="carro">
-     <!-- seccion del header -->
-     <header class="header">
+    <!-- seccion del header -->
+    <header class="header">
         <a href="#" class="logo"> <i class="fa-solid fa-mountain"></i> TurisJu</a>
 
         <nav class="navbar">
@@ -33,40 +35,66 @@
 
 
 
-    <main id="form">
+    <main class="form-carro">
         <div class="carro">
-        <h1>Carro de compras</h1>
-        <form action="/carro" method="post" id="carro">
-            <h2>Nombre</h2>
-            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
-            <label for="Nombre"></label>
+            <h1 class="carro-text">Carro de compras</h1>
+            <form action="/carro" method="post">
+                <div class="form-datos-usuario">
+                    <p><strong>Datos del usuario</strong></p>
+                    <div class="box-datos">
+                        <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+                        <label for="Nombre"></label>
+                    </div>
 
-            <h2>Apellido</h2>
-            <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
-            <label for="Apellido"></label>
+                    <div class="box-datos">
+                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+                        <label for="Apellido"></label>
+                    </div>
 
-            <h2>Correo Electronico</h2>
-            <input type="Correo Electronico" name="correo" id="correo" placeholder="Correo">
-            <label for="correo"></label>
+                    <div class="box-datos">
+                        <input type="email" name="correo" id="correo" placeholder="Correo Electrónico">
+                        <label for="correo"></label>
+                    </div>
 
-            <h2>Contacto Telefonico</h2>
-            <input type="Contacto Telefonico" name="telefono" id="telefono" placeholder="Telefono">
-            <label for="telefono"></label>
+                    <div class="box-datos">
+                        <input type="number" name="telefono" id="telefono" placeholder="Teléfono">
+                        <label for="telefono"></label>
+                    </div>
+                </div>
 
-            <h2>Comentarios</h2>
-            <input type="Comentarios" name="comentario" id="comentario" placeholder="Comentarios...">
-            <label for="comentarios"></label>
+                <div class="form-datos-reserva">
+                    <p><strong>Datos de la reserva</strong></p>
 
-            <h2>Cantidad de personas</h2>
-            <input type="Cantidad" name="cantidad" id="cantidad" placeholder="Cantidad de personas...">
-            <label for="comentarios"></label>
+                    <div class="box-datos">
+                        <label>Fecha de reserva: </label>
+                        <input type="date" name="fecha">
+                    </div>
 
-            <h2>Precio</h2>
-            <button type="submit">Comprar</button>
+                    <div class="box-datos">
+                        <label>Cantidad de personas: </label>
+                        <input type="number" name="cantidad-personas" id="cantidad" placeholder="Cantidad de personas">
+                    </div>
 
-        </form>
+                    <div class="box-datos">
+                        <label>Método de pago: </label>
+                        <select name="medio-pago">
+                            <option value="1">Efectivo</option>
+                            <option value="2">Transferencia</option>
+                            <option value="3">Débito</option>
+                            <option value="3">Tarjeta de crédito</option>
+                        </select>
+                    </div>
+
+                    <div class="box-datos">
+                        <textarea name="comentario" id="comentario">Comentarios...</textarea>
+                    </div>
+                </div>
+                <button type="submit" class="boton-carro">Comprar</button>
+
+            </form>
         </div>
     </main>
-    
+
 </body>
+
 </html>

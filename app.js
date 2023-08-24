@@ -5,7 +5,7 @@ const path= require('path');
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 
-const PORT= 3000;
+const PORT= 3030;
 
 //app.set('view','ejs');
 //app.set('views','./src/views');
