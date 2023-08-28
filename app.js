@@ -1,11 +1,25 @@
 const express= require ('express');
 const app= express();
 const path= require('path');
+const mainRouter = require("./src/routes/mainRouter")
+const detalleRouter = require("./src/routes/detalleRouter")
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-const PORT= 3030;
 
+
+app.use( '/', mainRouter);
+app.use('/detalle', detalleRouter);
+
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
+
+
+const PORT= 3000;
+
+app.listen(PORT,()=>console.log('Corriendo en el puerto: '+PORT));
+
+/* 
 app.set('view','ejs');
 app.set('views','./src/views');
 app.get('/',(req,res)=>{
@@ -40,3 +54,4 @@ app.post('/carro',(req,res)=>{
     res.redirect('/')
 })
 app.listen(PORT,()=>console.log('Corriendo en el puerto: '+PORT));
+*/
