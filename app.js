@@ -5,9 +5,6 @@ const mainRouter = require("./src/routes/mainRouter")
 const detalleRouter = require("./src/routes/detalleRouter")
 
 app.use(express.static(path.resolve(__dirname, 'public')));
-
-
-
 app.use( '/', mainRouter);
 app.use('/detalle', detalleRouter);
 
