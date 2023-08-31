@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/bccfa837a8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <%- include('./partials/head.ejs') %>
 </head>
 <body id="l">
     
     <!-- seccion del header -->
-    <header class="header">
-        <a href="#" class="logo"> <i class="fa-solid fa-mountain"></i> TurisJu</a>
-
-        <nav class="navbar">
-            <div id="nav-close" class="fas fa-times"></div>
-            <a href="#home">inicio</a>
-            <a href="#equipo">equipo</a>
-            <a href="#paquetes">paquetes</a>
-            <a href="#tienda">tienda</a>
-            <a href="#reseña">reseñas</a>
-            <a href="#blogs">blogs</a>
-        </nav>
-
-        <div class="iconos">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <div id="search-btn" class="fas fa-search"></div>
-        </div>
-    </header>
+    <%- include('./partials/header.ejs') %>
     <!-- seccion del header -->
 
     <!-- seccion de boton de busqueda -->
@@ -51,7 +27,7 @@
             
             <h1 class="mensaje">Inicia sesión </h1>
             
-            <form action="/login" method="post" id="logs">
+            <form action="/register/login" method="post" id="logs">
                 
                  
                 <input type="email" name= "correo" id="correo" placeholder="Correo electronico" autocomplete="on">

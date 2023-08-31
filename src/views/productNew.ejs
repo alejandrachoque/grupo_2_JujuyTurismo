@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <!-- seccion del header -->
+    <%- include('./partials/header.ejs') %>
+    <!-- seccion del header -->
+
+    <!-- seccion de boton de busqueda -->
+    <div class="search-form">
+
+        <div id="close-search" class="fas fa-times"></div>
+
+        <form action="">
+            <input type="search" name="" placeholder="Que estas buscando?...." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+    <!-- seccion de boton de busqueda -->
+
+    <!-- seccion del home -->
+    <section class="home" id="home">
+        <div class="box secondDetalle"
+            style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
+            <div class="content">
+                <div class="col-12">
+                    <form action="/product" method="post" class="formulario">
+                        <div class="row product-detail">
+                            <div class="col-12 col-md-6">
+                                <label for="name" class="form-label">Nombre del producto:</label>
+                                <input type="text" id="name" name="name" placeholder="Ingrese nombre" class="form-input">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="price" class="form-label">Precio del producto:</label>
+                                <input type="text" id="price" name="price" placeholder="Ingrese precio" class="form-input">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="temporada" class="form-label">Temporada:</label>
+                                <select name="temporada" id="temporada" class="form-input">
+                                    <option value="">Elegí</option>
+                                    <option value="EstacionV">Verano</option>
+                                    <option value="EstacionI">Invierno</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label">Descipción:</label>
+                                <textarea name="description" id="description" placeholder="Ingrese descripcion" class="form-input"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn">Crear nuevo producto</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
+    <!-- seccion del home -->
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
