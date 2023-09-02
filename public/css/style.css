@@ -50,141 +50,157 @@ form#registro {
 
 }
 
-form#registro input {
-  border-bottom: 1px solid;
-  margin-bottom: 12px;
-  text-align: left;
-  width: 70vw;
-  max-width: 300px;
-  padding: 12px;
-
-
-}
-
-form#registro input:focus {
-  border-bottom: 1px solid rgb(71, 71, 156);
-  outline: none;
-  border-bottom-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
-
+form#registro input{
+    border : 1px solid;
+    margin-bottom: 12px ;
+    text-align: left;
+    width: 70vw;
+    max-width: 300px;
+    padding: 12px;
+    
 
 }
+form#registro input:focus{
+  border: 2px solid green}
+  /*
+    border-bottom: 1px solid rgb(71, 71, 156);
+    outline: none; 
+    border-bottom-color: #9ecaed; 
+    box-shadow: 0 0 10px #9ecaed;
 
-form#registro button {
-  background-color: black;
-  color: white;
-  padding: 4px;
-  width: 70vw;
-  max-width: 300px;
+
+}*/
+form#registro button{
+    background-color: black;
+    color:white;
+    padding: 4px;
+    width: 70vw;
+    max-width: 300px;
+}
+form#registro button:hover{
+    background-color: green;
+    color: white;
+}
+
+div.bl h1{
+
+}
+@media (min-width:768px){
+  div.bl{
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  justify-content: space-around;
+}
+div.reg{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 1vw;
+  justify-content: space-around;
+}
+div.bl h1.mensaj{
+  color: #fff;
+  font-size: 10vw;
+  
+}
+div.reg h1.mensaj{
+  font-size: 10vw;
+  color:  white;
+}
+}
+@media(min-width:480px){
+    div.regitr{
+        
+        
+        padding: 33px 21px;
+        box-shadow: 0px 0px 10px rgb(174, 169, 169);
+        background-color: white;}
+        
+div.log{
+    
+        padding: 55px 21px;
+        box-shadow: 0px 0px 10px rgb(174, 169, 169);
+        background-color: white;
+        
+}
+}
+
+@media (max-width:479px){
+  
+
+    
+    main#login{
+        background-color: transparent ;
+    }
+    main#form a{
+        color: #fff;
+    }
+    
 }
 
 form#registro button:hover {
   background-color: green;
   color: white;
 }
+/*formulario registro*/
+    body#reg{
+       background:rgb(47, 105, 40);
+       background-image: url(../images/jujuy.jpg);
+       background-size: cover
+       ;
+    }
 
-@media(min-width:480px) {
-  div.regitr {
 
-
-    padding: 33px 21px;
-    box-shadow: 0px 0px 10px rgb(174, 169, 169);
-    background-color: white;
-  }
-
-  div.log {
-
-    padding: 66px 21px;
-    box-shadow: 0px 0px 10px rgb(174, 169, 169);
-    background-color: white;
-
-  }
-
-}
-
-@media (max-width:479px) {
-  main#form h1.mensaje {
-    display: none;
-  }
-
-  main#login h1.mensaje2 {
-    display: none;
-  }
-
-  main#form {
-    background-color: #362b53
-  }
-
-  main#login {
-    background-color: #362b53;
-  }
-
-  main#form a {
-    color: #fff;
-  }
-
-}
-
-main#form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-/*formulario de login*/
-
-/*div.log{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-div.logs h1{
-    margin: 12px;
-}
-main#login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-}
-form#logs{
-    display: flex;
-    flex-direction: column;}
-form#logs input{
-    border-bottom : 1px solid;
-    margin-bottom: 12px ;
-    text-align: left;
-    width: 70vw;
-    max-width: 300px;
-    padding: 12px;
-        
-    
+    body#l{
+        background-image: url(../images/TURISMO-JUJUY.jpg);
+        background-size: cover ;
+    }
+    main#login div.log h1{
+        text-align: center;
+        padding: 4px;
+        margin: 11px;
+    }
+    main#login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    form#logs{
+        display: flex;
+        flex-direction: column;
     }
     form#logs button{
-        background-color: black;
+        background-color:black;
         color:white;
         padding: 4px;
         width: 70vw;
         max-width: 300px;
     }
-    form#logs button:hover{
-        background-color: rgb(167, 160, 160);
-        color: black;
-    }
-    */
-body#reg {
-  background: rgb(47, 105, 40);
-  background-image: url(../images/Salinas-Grandes.jpg);
-  background-size: cover;
-}
-
-
-body#l {
-  background-image: url(../images/TURISMO-JUJUY.jpg);
-  background-repeat: round;
-}
+    form#logs input[type=email]{
+        border : 1px solid;
+        margin-bottom: 12px ;
+        text-align: left;
+        width: 70vw;
+        max-width: 300px;
+        padding: 12px;
+            
+        
+        }
+        form#logs input[type=password]{
+            border : 1px solid;
+            margin-bottom: 12px ;
+            text-align: left;
+            width: 70vw;
+            max-width: 300px;
+            padding: 12px;
+                
+            
+            }
+            form#logs input[type=checkbox]{
+            margin: 10px;
 
 main#login div.log h1 {
   text-align: center;
@@ -280,7 +296,55 @@ form#logs input:focus {
 
 /*estilos de detalle html del header"*/
 
+            
+           }
+           main#form a:hover{
+            color: blue
+           }
+           form#logs input:focus{
+            border: 2px solid green
+            /*border-bottom: 1px solid rgb(71, 71, 156);
+            outline: none; 
+            border-bottom-color: #9ecaed; 
+            box-shadow: 0 0 10px #9ecaed;
+        */
+        
+        }
+        
+        footer{
+          background-color: white;
+          font-size: 1.7em;
+        }
 
+        div.datos{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+            /*estilos de detalle html del header"*/
+            body img{
+              width: 100px;
+            }
+        /*body{
+          background-image: url(../images/Jujuy678.png);
+          background-repeat: repeat;
+
+        }*/
+        @media (max-width:767px){
+          div.bl h1.mensaj{
+            display: none;
+          }
+            main#form h1.mensaj{
+      display: none;
+    }
+          }
+        
+        @media (max-width:991px){
+
+        }
+        @media (max-width:1200px){
+
+        }
 :root {
   --verde: #219150;
   --verde-claro: #219100;
@@ -636,9 +700,10 @@ section {
   html {
     font-size: 50%;
   }
-}
+  
 
-/*# sourceMappingURL=css.css.map */
+
+}/*# sourceMappingURL=css.css.map */
 
 .home .box .content {
   width: 50rem;
