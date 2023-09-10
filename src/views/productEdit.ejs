@@ -21,7 +21,7 @@
     </div>
     <!-- seccion de boton de busqueda -->
 
-    <!-- seccion del home -->
+    <!-- seccion del home <%= productToEdit.id %>?_method=PUT -->
     <section class="home" id="home">
         <div class="box secondDetalle"
             style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
@@ -31,23 +31,15 @@
                         <div class="row product-detail">
                             <div class="col-12 col-md-6">
                                 <label for="name" class="form-label">Nombre del producto a editar:</label>
-                                <input type="text" id="name" name="name"  class="form-input">
+                                <input type="text" id="name" name="name"  class="form-input" value="<%= productToEdit.firstName %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="price" class="form-label">Precio del producto:</label>
-                                <input type="text" id="price" name="price"  class="form-input">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="temporada" class="form-label">Temporada:</label>
-                                <select name="temporada" id="temporada" class="form-input">
-                                    <option value="">Elegí</option>
-                                    <option value="EstacionV">Verano</option>
-                                    <option value="EstacionI">Invierno</option>
-                                </select>
+                                <input type="text" id="price" name="price"  class="form-input" value="<%= productToEdit.price %>">
                             </div>
                             <div class="col-12">
                                 <label for="description" class="form-label">Descipción:</label>
-                                <textarea name="description" id="description"  class="form-input"></textarea>
+                                <textarea name="description" id="description"  class="form-input" ><%= productToEdit.description %></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn">Editar producto</button>
