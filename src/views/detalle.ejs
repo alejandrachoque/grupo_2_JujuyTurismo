@@ -26,14 +26,16 @@
                     <div class="box secondDetalle"
                         style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
                         <div class="content">
-                            <span>Titulo del producto</span>
+                            <span><%= pFind.firstName %></span>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Voluptates maiores eos autem. Esse libero eligendi, 
-                                dolores voluptatem enim saepe nisi suscipit! Veniam voluptatem ab nisi eligendi ratione, 
-                                temporibus dolorum architecto!
+                                <%= pFind.description %>
+                                <br>
+                                ¡A tan solo: <%= pFind.price %>$!
                             </p>
-                            <a href="#" class="btn">¡Comprar!</a>
+                            <a href="#" class="btn"> ¡Comprar!</a>
+                            <br>
+                            <a href="/product/editar/<%= pFind.id %>" class="btn">Editar</a>
+                            <a href="/product/crear" class="btn">Agregar producto</a>
                         </div>
                         <div class="content">
                                 <iframe class="video" src="https://www.youtube.com/embed/S2wJxDBZ_l0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

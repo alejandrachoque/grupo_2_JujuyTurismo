@@ -327,6 +327,10 @@ section {
   width: 100%;
   height: 300px;
 }
+ /*            precio de producto en pagina produclist           */
+.home .box.secondDetalle .content .precioP{ 
+  font-size: 2rem;
+}
    /*            formulario           */
 .form-label {
   display: inline-block;
@@ -938,7 +942,7 @@ section {
   color: var(--negro);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 2440px) {
   .header {
     padding: 2rem;
   }
