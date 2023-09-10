@@ -20,3 +20,6 @@ el trabajo de grupo es dificil y lo hicimos , pero algo falta para llegar arriba
 
 Restrospectiva del 2do sprint 
 El trabajo realizado en este sprint es similar al primero nos falta coordinacion y planificacion, aunque todos los miembros del grupo participamos. La comunicacion sigue siendo un factor indispensable y la cual no podemos modificar para nuestro bien aun.
+
+Restrospectiva del 3er sprint
+Notamos en este sprint que el tiempo nos pisa los talones, esto es asi puesto que no realizamos una planificacion adecuada y la comunicacion nos cuesta de igual manera. Debemos enfocarnos en la planificacion y la division de tareas, ibjetivos que queremos lograr en posteriores sprints.
