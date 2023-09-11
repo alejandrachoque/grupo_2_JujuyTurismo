@@ -10,8 +10,8 @@
     {
         "id": 2,
         "firstName": "Las salinas",
-        "image": "../../images/Salinas-Grandes.jpg", 
-        "firstDescription": "Pequeña descripcion con la imagen de fondo",       
+        "image": "../../images/Salinas-Grandes.jpg",
+        "firstDescription": "Pequeña descripcion con la imagen de fondo",
         "description": "Descripcion grande",
         "price": 6700
     },
@@ -20,7 +20,7 @@
         "firstName": "La quebrada",
         "image": "../../images/TURISMO-JUJUY.jpg",
         "firstDescription": "Pequeña descripcion con la imagen de fondo",
-        "description": "Descripcion grande",        
+        "description": "Descripcion grande",
         "price": 9500
     }
 ]
