@@ -5,18 +5,22 @@ const productsFilePath = path.join(__dirname, '../models/products.json'); // gua
 const products= require("../models/products.json")
 
 const productNewEditController = {
+
+
+    //muestra el formulario de agregar producto
     crear: (req,res) => {
         //console.log('entre a crear')
         res.render('productNew');
         
     },
      //aun no esta implementado
+     //para crear el producto la logica
     AllProducts: (req, res) => {
 		let newProduct = req.body;
 		newProduct.id = `${products.length +1}`
 		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(stringify("products"))); //cambia de javascript a json para poder guardar products
-		res.redirect('/productsList');
+		fs.writeFileSync(productsFilePath, JSON.stringify(products)); //cambia de javascript a json para poder guardar products
+		res.redirect('/product');
         
 	},
     editar: (req,res) => {
@@ -44,6 +48,16 @@ const productNewEditController = {
 		const pFind = products.find((p) => p.id == idP); // no se porque no me toma con "===" estricto
         //console.log('pFind:' + pFind.id)
 		res.render('detalle', {pFind})
+    },
+    borrar:(req,res)=>{
+        const {id}= req.params;
+
+        const indiceProduct= products.findIndex((prod)=> prod.id===id);
+        products.splice(indiceProduct,1);
+
+        fs.writeFileSync(productsFilePath,JSON.stringify(products));
+
+        res.redirect('/product')
     }
 }
 

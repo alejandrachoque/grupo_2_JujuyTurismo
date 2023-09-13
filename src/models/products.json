@@ -10,8 +10,8 @@
     {
         "id": 2,
         "firstName": "Las salinas",
-        "image": "../../images/Salinas-Grandes.jpg", 
-        "firstDescription": "Pequeña descripcion con la imagen de fondo",       
+        "image": "../../images/Salinas-Grandes.jpg",
+        "firstDescription": "Pequeña descripcion con la imagen de fondo",
         "description": "Descripcion grande",
         "price": 6700
     },
@@ -20,7 +20,14 @@
         "firstName": "La quebrada",
         "image": "../../images/TURISMO-JUJUY.jpg",
         "firstDescription": "Pequeña descripcion con la imagen de fondo",
-        "description": "Descripcion grande",        
+        "description": "Descripcion grande",
         "price": 9500
+    },
+    {
+        "firstName": "Pucará de tilcara ",
+        "price": "5500",
+        "description": "lalala",
+        "image": "PuebloDeMaimara_04-1024x576.jpg",
+        "id": "4"
     }
 ]
