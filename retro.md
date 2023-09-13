@@ -23,3 +23,6 @@ El trabajo realizado en este sprint es similar al primero nos falta coordinacion
 
 Restrospectiva del 3er sprint
 Notamos en este sprint que el tiempo nos pisa los talones, esto es asi puesto que no realizamos una planificacion adecuada y la comunicacion nos cuesta de igual manera. Debemos enfocarnos en la planificacion y la division de tareas, ibjetivos que queremos lograr en posteriores sprints.
+
+Restrospectiva del sprint 4
+La comunicacion se nos sigue complicando en este punto y ponerse de acuerdo para trabajar. La planificación aun nos cuesta a medida que se van complejizando las tareas.
