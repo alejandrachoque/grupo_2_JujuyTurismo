@@ -26,7 +26,9 @@
                 
         
         <h1 class=" mensaje">Registráte</h1>
-        <form action="/register" method="post" id="registro">
+        <form action="/register" method="post" id="registro" enctype="multipart/form-data">
+            <label for="user" >Mi foto</label>
+            <input type="file" id="user" name="perfil">
             <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
             <label for="Nombre"></label>
 
@@ -34,8 +36,9 @@
             <label for="Apellido"></label>
 
             <input type="email" name="email" id="email" placeholder="E-mail">
+            
             <label for="email"></label>
-
+            
             <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" required>
             <label for="contraseña"></label>
 
