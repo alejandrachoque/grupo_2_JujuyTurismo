@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
+
+const uploadMulter= require('../middlewares/multerProd');
 const productNewEditController = require("../controller/product-new-edit-Controller")
+
+
+
 
 
 
@@ -11,7 +16,8 @@ router.get('/editar/:id', productNewEditController.editar); //
 router.put('/editar', productNewEditController.momentaneo); // 
 router.get("/crear", productNewEditController.crear);
 
-router.post('/',productNewEditController.AllProducts)
+//crea
+router.post('/',uploadMulter.single('image'),productNewEditController.AllProducts)
 
 router.post('/', productNewEditController.momentaneo); 
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle
