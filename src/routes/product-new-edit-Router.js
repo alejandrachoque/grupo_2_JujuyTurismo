@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const uploadMulter= require('../middlewares/multerProd');
+
+///requerir multer de un middleware aparte
+const uploadMulterProd= require('../middlewares/multerProd');
 const productNewEditController = require("../controller/product-new-edit-Controller")
 
 
@@ -17,7 +19,8 @@ router.put('/editar', productNewEditController.momentaneo); //
 router.get("/crear", productNewEditController.crear);
 
 //crea
-router.post('/',uploadMulter.single('image'),productNewEditController.AllProducts)
+//implementamos multer
+router.post('/',uploadMulterProd.single('image'),productNewEditController.AllProducts)
 
 router.post('/', productNewEditController.momentaneo); 
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle
