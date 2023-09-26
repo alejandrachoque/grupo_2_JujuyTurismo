@@ -3,6 +3,8 @@ const path = require("path");
 const userPath = path.join(__dirname, '../models/user.json'); // guardo la direccion del json
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // lo leo y guardo en products
 const users= require("../models/user.json")
+
+const {validationResult}= require('express-validator')
 const userController={
     register: (req,res)=>{
         res.render('register')
@@ -18,11 +20,30 @@ const userController={
         res.redirect('/')
     },
     userNew: (req, res) => {
-		let newUser = req.body;
+const errors= validationResult(req)
+console.log(errors.mapped());
+
+if(errors.isEmpty()){
+    let newUser = req.body;
 		newUser.id = `${users.length +1}`
 		users.push(newUser);
 		fs.writeFileSync(userPath, JSON.stringify(users)); //cambia de javascript a json para poder guardar products
 		res.redirect('/');
+}else{
+    res.render('register',{
+        errors:errors.mapped(),
+        old:req.body
+    })
+}
+
+
+
+
+
+
+
+
+		
         
 	},/*
     editar: (req,res) => {
