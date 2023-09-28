@@ -1,0 +1,89 @@
+[
+    {
+        "id": "1",
+        "firstName": "José",
+        "lastName": "Cruz",
+        "email": "JM@gmail.com",
+        "password": "josejose123",
+        "foto": ""
+    },
+    {
+        "id": "2",
+        "firstName": "Marta",
+        "lastName": "Sánchez",
+        "email": "martita@gmail.com",
+        "password": "mamarta",
+        "foto": ""
+    },
+    {
+        "id": "3",
+        "firstName": "Gustavo",
+        "lastName": "Gonzalez",
+        "email": "gusgus@gmail.com",
+        "password": "gustavogonzalez2",
+        "foto": ""
+    },
+    {
+        "id": "4",
+        "firstName": "Juan",
+        "lastName": "Perez",
+        "email": "perezJuan@gmail.com",
+        "password": "perico125",
+        "foto": ""
+    },
+    {
+        "id": "5",
+        "firstName": "Joaquin",
+        "lastName": "Chauque",
+        "email": "joako12@gmail.com",
+        "password": "joaquin321",
+        "foto": ""
+    },
+    {
+        "id": "6",
+        "firstName": "Luciano",
+        "lastName": "Mamani",
+        "email": "luchani@gmail.com",
+        "password": "luchanom",
+        "foto": ""
+    },
+    {
+        "id": "7",
+        "firstName": "Gabriela",
+        "lastName": "Quipildor",
+        "email": "gabyquipildor@gmail.com",
+        "password": "ggabi456",
+        "foto": ""
+    },
+    {
+        "id": "8",
+        "firstName": "Dario",
+        "lastName": "Fernández",
+        "email": "guille_fernandez@gmail.com",
+        "password": "darioller",
+        "foto": ""
+    },
+    {
+        "id": "9",
+        "firstName": "Maria",
+        "lastName": "Paredes",
+        "email": "mariaparedes@gmail.com",
+        "password": "45mariape",
+        "foto": ""
+    },
+    {
+        "id": "10",
+        "firstName": "Julian",
+        "lastName": "Martinez",
+        "email": "julimartin@gmail.com",
+        "password": "jjmarinez00",
+        "foto": ""
+    },
+    {
+        "Nombre": "Gabriela Leonor",
+        "Apellido": "Choque",
+        "email": "ggaaabii7@gmail.com",
+        "password": "$2a$10$wNwHJasW1vobiHTkg4DJSeSduZx4XtPVX2fpiCvtAOxzp1TmlnZw6",
+        "id": "11"
+    }
+]

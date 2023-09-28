@@ -28,7 +28,7 @@
         <h1 class=" mensaje">Registráte</h1>
         <form action="/register" method="post" id="registro" enctype="multipart/form-data">
             <label for="user" >Mi foto</label>
-            <input type="file" id="user" name="perfil">
+            <input type="file" id="user" name="perfil" value="<%=locals.old&&old.perfil%>">
             <%if(locals.errors && errors.perfil){%>
                 <p class= "feedback"style="color: firebrick"> <%=errors.perfil.msg %> </p>
             <% } %>
@@ -50,9 +50,9 @@
             <% } %>
             <label for="email"></label>
             
-            <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" required value="<%=locals.old&&old.contraseña%>">
-            <%if(locals.errors && errors.contraseña){%>
-                <p class= "feedback"style="color: firebrick"> <%=errors.contraseña.msg %> </p>
+            <input type="password" name="password" placeholder="Contraseña" id="contraseña">
+            <%if(locals.errors && errors.password){%>
+                <p class= "feedback"style="color: firebrick"> <%=errors.password.msg %> </p>
             <% } %>
             <label for="contraseña"></label>
 

@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require("path");
-const userPath = path.join(__dirname, '../models/user.json'); // guardo la direccion del json
+const userPath = path.join(__dirname, '../data/user.json'); // guardo la direccion del json
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // lo leo y guardo en products
-const users= require("../models/user.json")
+const users= require("../data/user.json")
+;
 
 const {validationResult}= require('express-validator')
+const bcrypt= require('bcryptjs')
 const userController={
     register: (req,res)=>{
         res.render('register')
@@ -22,13 +24,26 @@ const userController={
     userNew: (req, res) => {
 const errors= validationResult(req)
 console.log(errors.mapped());
-
 if(errors.isEmpty()){
-    let newUser = req.body;
+newUser= req.body
+newUser={
+    ...req.body,
+    password: bcrypt.hashSync(req.body.password,10)
+}
 		newUser.id = `${users.length +1}`
+        
 		users.push(newUser);
+      
+    
 		fs.writeFileSync(userPath, JSON.stringify(users)); //cambia de javascript a json para poder guardar products
-		res.redirect('/');
+		 res.redirect('/');
+    /*let newUser={
+        ...req.body,
+    contraseña:bcrypt.hashSync(req.body.contraseña,10),
+    perfil: req.file?.filename*/
+
+
+        
 }else{
     res.render('register',{
         errors:errors.mapped(),

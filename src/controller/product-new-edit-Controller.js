@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require("path");
-const productsFilePath = path.join(__dirname, '../models/products.json'); // guardo la direccion del json
+const productsFilePath = path.join(__dirname, '../data/products.json'); // guardo la direccion del json
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // lo leo y guardo en products
-const products= require("../models/products.json")
+const products= require("../data/products.json")
 
 const productNewEditController = {
 
