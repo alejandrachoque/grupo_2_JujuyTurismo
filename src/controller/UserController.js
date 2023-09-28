@@ -23,12 +23,13 @@ const userController={
     },
     userNew: (req, res) => {
 const errors= validationResult(req)
-console.log(errors.mapped());
+//console.log(errors.mapped());
 if(errors.isEmpty()){
 newUser= req.body
 newUser={
     ...req.body,
-    password: bcrypt.hashSync(req.body.password,10)
+    password: bcrypt.hashSync(req.body.password,10),
+    foto:req.file.filename    
 }
 		newUser.id = `${users.length +1}`
         
@@ -42,7 +43,7 @@ newUser={
     contraseña:bcrypt.hashSync(req.body.contraseña,10),
     perfil: req.file?.filename*/
 
-
+console.log('fito',req.file);
         
 }else{
     res.render('register',{
