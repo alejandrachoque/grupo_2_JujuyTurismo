@@ -43,7 +43,7 @@ newUser={
     contraseña:bcrypt.hashSync(req.body.contraseña,10),
     perfil: req.file?.filename*/
 
-console.log('fito',req.file);
+
         
 }else{
     res.render('register',{
