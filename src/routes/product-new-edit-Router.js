@@ -15,14 +15,15 @@ router.get('/', productNewEditController.listar);
 router.get('/detalle/:id', productNewEditController.detalle); // <base href="/"> me soluciono todos los problemas
 
 router.get('/editar/:id', productNewEditController.editar); // 
-router.put('/editar', productNewEditController.momentaneo); // 
+router.put('/editar/:id', productNewEditController.actualizar);
+//router.put('/editar', productNewEditController.momentaneo); // 
 router.get("/crear", productNewEditController.crear);
 
 //crea
 //implementamos multer
 router.post('/',uploadMulterProd.single('image'),productNewEditController.AllProducts)
 
-router.post('/', productNewEditController.momentaneo); 
+//router.post('/', productNewEditController.momentaneo); 
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle
 //carrito de compras//
 

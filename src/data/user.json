@@ -93,5 +93,13 @@
         "password": "$2a$10$YIMXUbWbq6hO5iiBjgrq1.vQ1BbGPirYxyUT/EXj8llRL1o3FCQZ2",
         "foto": "user-1695943849100.jpg",
         "id": "12"
+    },
+    {
+        "Nombre": "asd",
+        "Apellido": "asd",
+        "email": "asd@asd.com",
+        "password": "$2a$10$ftbczykOlTG3DhYRDXI06ugK92uoHxWDXmeeoWb06XUy07BdCvCoG",
+        "foto": "user-1696488093794.png",
+        "id": "13"
     }
 ]

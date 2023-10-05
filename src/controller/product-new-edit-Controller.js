@@ -33,9 +33,23 @@ const productNewEditController = {
         //esto va en el form -> action -> html: /edit/<%= productToEdit.id %>?_method=PUT
         
     },    
-    momentaneo: (req,res) => {
-        res.redirect('/');
-        
+    actualizar: (req,res) => {
+        const idP = req.params;
+        console.log(idP);
+        let producActualizado = req.body;
+        const productToEdit = products.findIndex((p) => p.id == idP.id);
+        console.log(productToEdit);
+        products[productToEdit] = {
+            id: idP.id,
+            firstName: producActualizado.name,
+            image: '../../images/Salinas-Grandes.jpg', //falta agregar el campo de imagen en el formulario, tambien para first description
+            firstDescription: "Descpripcion grande",
+            description: producActualizado.description,
+            price: producActualizado.price
+        }
+        fs.writeFileSync(productsFilePath,JSON.stringify(products));
+        console.log(products)
+        res.redirect('/product');
     },
     listar: (req,res) => {
         res.render('productList', {
