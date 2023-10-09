@@ -8,6 +8,11 @@ const methodOverride = require('method-override')
 const session = require('express-session');
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+app.use(session({
+    secret: 'secreto',
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());

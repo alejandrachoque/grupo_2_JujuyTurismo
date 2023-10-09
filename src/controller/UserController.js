@@ -16,15 +16,19 @@ const userController={
     },*/
 
     login:(req,res)=>{
-
+        console.log(req.session)
         res.render('login')
     },
     entrar:(req,res)=>{ 
-        
+        const errors= validationResult(req)
+        if(errors.isEmpty()){
         let usuarioALoguear = users.find(em => em['email'] === req.body.email);
         if(usuarioALoguear){
             let esSuContra = bcrypt.compareSync(req.body.password, usuarioALoguear.password);
             if(esSuContra){
+                delete usuarioALoguear.password;
+                req.session.userLogger = usuarioALoguear;
+                
                 return res.redirect('/'); // cambiar a la pagina home despues
             }
             return res.render('login', {
@@ -35,38 +39,44 @@ const userController={
                 }
             })
         }
+        
+        }else{
+            res.render('login',{
+                errors:errors.mapped(),
+                old:req.body
+            })}
         //res.redirect('/')
     },
     userNew: (req, res) => {
-const errors= validationResult(req)
-//console.log(errors.mapped());
-if(errors.isEmpty()){
-newUser= req.body
-newUser={
-    ...req.body,
-    password: bcrypt.hashSync(req.body.password,10),
-    foto:req.file.filename    
-}
-		newUser.id = `${users.length +1}`
-        
-		users.push(newUser);
-      
-    
-		fs.writeFileSync(userPath, JSON.stringify(users)); //cambia de javascript a json para poder guardar products
-		 res.redirect('/');
-    /*let newUser={
-        ...req.body,
-    contraseña:bcrypt.hashSync(req.body.contraseña,10),
-    perfil: req.file?.filename*/
+                const errors= validationResult(req)
+                //console.log(errors.mapped());
+                if(errors.isEmpty()){
+                newUser= req.body
+                newUser={
+                    ...req.body,
+                    password: bcrypt.hashSync(req.body.password,10),
+                    foto:req.file.filename    
+                }
+                        newUser.id = `${users.length +1}`
+                        
+                        users.push(newUser);
+                    
+                    
+                        fs.writeFileSync(userPath, JSON.stringify(users)); //cambia de javascript a json para poder guardar products
+                        res.redirect('/');
+                    /*let newUser={
+                        ...req.body,
+                    contraseña:bcrypt.hashSync(req.body.contraseña,10),
+                    perfil: req.file?.filename*/
 
 
-        
-}else{
-    res.render('register',{
-        errors:errors.mapped(),
-        old:req.body
-    })
-}
+                        
+                }else{
+                    res.render('register',{
+                        errors:errors.mapped(),
+                        old:req.body
+                    })
+                }
 
 
 
