@@ -101,5 +101,13 @@
         "password": "$2a$10$ftbczykOlTG3DhYRDXI06ugK92uoHxWDXmeeoWb06XUy07BdCvCoG",
         "foto": "user-1696488093794.png",
         "id": "13"
+    },
+    {
+        "Nombre": "a",
+        "Apellido": "a",
+        "email": "a@a.com",
+        "password": "$2a$10$VYQIQRbqpzAw4yfsxJORTuqwyisnbmxdntY5r6yPjMQbwtwyaPpfS",
+        "foto": "user-1696512317629.png",
+        "id": "14"
     }
 ]

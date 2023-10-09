@@ -48,7 +48,7 @@ const productNewEditController = {
             price: producActualizado.price
         }
         fs.writeFileSync(productsFilePath,JSON.stringify(products));
-        console.log(products)
+        //console.log(products)
         res.redirect('/product');
     },
     listar: (req,res) => {

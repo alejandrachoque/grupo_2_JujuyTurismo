@@ -5,6 +5,7 @@ const mainRouter = require("./src/routes/mainRouter");
 const userRuta= require('./src/routes/User')
 const productNewEditController = require("./src/routes/product-new-edit-Router");
 const methodOverride = require('method-override')
+const session = require('express-session');
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.use(methodOverride('_method'));

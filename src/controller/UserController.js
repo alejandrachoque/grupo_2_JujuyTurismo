@@ -16,10 +16,26 @@ const userController={
     },*/
 
     login:(req,res)=>{
+
         res.render('login')
     },
-    entrar:(req,res)=>{
-        res.redirect('/')
+    entrar:(req,res)=>{ 
+        
+        let usuarioALoguear = users.find(em => em['email'] === req.body.email);
+        if(usuarioALoguear){
+            let esSuContra = bcrypt.compareSync(req.body.password, usuarioALoguear.password);
+            if(esSuContra){
+                return res.redirect('/'); // cambiar a la pagina home despues
+            }
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Datos erroneos'
+                    }
+                }
+            })
+        }
+        //res.redirect('/')
     },
     userNew: (req, res) => {
 const errors= validationResult(req)
