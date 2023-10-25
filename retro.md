@@ -26,3 +26,6 @@ Notamos en este sprint que el tiempo nos pisa los talones, esto es asi puesto qu
 
 Restrospectiva del sprint 4
 La comunicacion se nos sigue complicando en este punto y ponerse de acuerdo para trabajar. La planificación aun nos cuesta a medida que se van complejizando las tareas.
+
+Restrospectiva del sprint 5
+creo que nuestro punto debil sigue siendo la comunicacion, aunque tratamos de trabajar todos en el proyecto. A medida que se complejizan las tareas nos vamos quedando un toque atras, esperamos mejorar proximamente
