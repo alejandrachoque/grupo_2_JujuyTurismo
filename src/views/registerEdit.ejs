@@ -25,37 +25,36 @@
         <div class="regitr">
                 
         
-        <h1 class=" mensaje">Registráte</h1>
-        <form action="/register" method="post" id="registro" enctype="multipart/form-data">
+        <h1 class=" mensaje">Edita tu usuario</h1>
+        <form action="/register/editar/<%= u.id %>?_method=PUT" method="post" id="registro" >
             
-            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" value="<%=locals.old&&old.Nombre%>">
+            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" value="<%=u.FirstName%>">
             <%if(locals.errors && errors.Nombre){%>
                 <p class= "feedback"style="color: firebrick"> <%=errors.Nombre.msg %> </p>
             <% } %>
             <label for="Nombre"></label>
 
-            <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" value="<%=locals.old&&old.Apellido%>">
+            <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" value="<%=u.LastName%>">
             <%if(locals.errors && errors.Apellido){%>
                 <p class= "feedback" style="color: firebrick;"><%= errors.Apellido.msg %> </p>
             <% } %>
             <label for="Apellido"></label>
 
-            <input type="email" name="email" id="email" placeholder="E-mail" value="<%=locals.old&&old.email%>">
+            <input type="email" name="email" id="email" placeholder="E-mail" value="<%=u.Email%>" disabled>
             <%if(locals.errors && errors.email){%>
                 <p class= "feedback" style="color: firebrick"><%= errors.email.msg %> </p>
             <% } %>
             <label for="email"></label>
             
-            <input type="password" name="password" placeholder="Contraseña" id="contraseña">
+            <input type="password" name="password" placeholder="Contraseña" id="contraseña" value="<%=u.Password%>" disabled>
             <%if(locals.errors && errors.password){%>
                 <p class= "feedback"style="color: firebrick"> <%=errors.password.msg %> </p>
             <% } %>
             <label for="contraseña"></label>
 
-            <button type="submit">Registráte</button>
+            <button type="submit">Finalizar edicion</button>
 
-            <label class="frase">Ya tienes una cuenta?</label>
-            <a href="/register/login">Inicia sesión</a>
+            
 
         </form>
     

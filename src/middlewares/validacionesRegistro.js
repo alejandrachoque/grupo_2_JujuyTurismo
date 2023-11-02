@@ -4,7 +4,8 @@ const validaciones=[body('Nombre').notEmpty().withMessage('Tenés que escribir u
 body('Apellido').notEmpty().withMessage('Tenés que escribir un apellido'),
 body('email').notEmpty().withMessage('Escribí tu correo electronico').bail()
 .isEmail().withMessage('Tiene que ser en formato de correo válido'),
-body('password').notEmpty().withMessage('Escribí una contraseña'),
+body('password').notEmpty().withMessage('Escribí una contraseña')//,
+/*
 body('perfil').custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.png', '.gif'];
@@ -20,7 +21,7 @@ body('perfil').custom((value, { req }) => {
 
     return true;
 }),//opcional
-
+*/
 ]
 
 

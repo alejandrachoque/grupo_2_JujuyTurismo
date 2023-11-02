@@ -1,6 +1,6 @@
 function logueado(req,res,next){
-    if(req.session.userLogger){
-        return res.redirect('/');
+    if(req.session.userLogged){
+        return res.redirect('/register/perfil');
     }
         next();
     

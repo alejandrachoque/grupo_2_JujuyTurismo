@@ -13,7 +13,7 @@ const productNewEditController = {
         res.render('productNew');
         
     },
-    creando: async (req,res) => {
+    creando: async (req,res) => { //lo termine haciendo en allproducts
         /*
         let asd = req.body
         await db.Product.create({

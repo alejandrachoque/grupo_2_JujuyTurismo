@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <!-- seccion del header -->
+    <%- include('./partials/header.ejs') %>
+    <!-- seccion del header -->
+
+    <!-- seccion de boton de busqueda -->
+    <div class="search-form">
+
+        <div id="close-search" class="fas fa-times"></div>
+
+        <form action="">
+            <input type="search" name="" placeholder="Que estas buscando?...." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+    <!-- seccion de boton de busqueda -->
+
+    <!-- seccion del home -->
+    <section class="home" id="home">
+
+        <div class="box second">
+            <div class="content">
+                <span style="color: black;"> Bienvenido </span> <br>
+                <span style="color: black;"> nombre:  <%= user.FirstName %> </span> <br>
+                <span style="color: black;"> apellido:  <%= user.LastName %> </span> <br>
+                <span style="color: black;"> email:  <%= user.Email %> </span> <br>
+            </div>
+            <a href="/register/logout">Salir</a>
+            <a href="/register/editar/<%=user.id%>">Editar</a>
+        </div>
+
+    </section>
+    <!-- seccion del home -->
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
