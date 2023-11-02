@@ -21,16 +21,16 @@
     </div>
     <!-- seccion de boton de busqueda -->
 
-    <!-- seccion del home -->
+    <!-- seccion del home, aca en el home faltan las imagenes de fondo, no estan porque en la base de datos no hay una tabla que las contenga-->
     <section class="home" id="home" >
-        <% arrayP.forEach((products) => { %>
-            <div class="  box secondDetalle"style=" background: url('/images/<%= products.image %>') no-repeat;" >
+        <% products.forEach((products) => { %>
+            <div class="  box secondDetalle"style=" background: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/86000/86475-Jujuy-Province.jpg) no-repeat;" >
                 <section class="content">
                     
                         <article class="">
-                            <span><%= products.firstName %></span>     
-                            <p><%= products.firstDescription %></p>
-                            <h3 class="precioP"> Desde: <%= products.price %> pesos</h3> 
+                            <span><%= products.FirstName %></span>     
+                            <p><%= products.FirstDescription %></p>
+                            <h3 class="precioP"> Desde: <%= products.Price %> pesos</h3> 
                         </article>   
                         <a href="/product/detalle/<%= products.id %>" class="btn">¡Mas detalles!</a>
                         

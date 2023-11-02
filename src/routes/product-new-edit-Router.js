@@ -18,10 +18,10 @@ router.get('/editar/:id', productNewEditController.editar); //
 router.put('/editar/:id', productNewEditController.actualizar);
 //router.put('/editar', productNewEditController.momentaneo); // 
 router.get("/crear", productNewEditController.crear);
-
+//router.post("/", productNewEditController.creando)
 //crea
 //implementamos multer
-router.post('/',uploadMulterProd.single('image'),productNewEditController.AllProducts)
+router.post('/',productNewEditController.AllProducts)
 
 //router.post('/', productNewEditController.momentaneo); 
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle

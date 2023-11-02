@@ -26,11 +26,14 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        Price: dataTypes.INTEGER(11)
+        Price: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false
+        }
     },
     {
         tableName:'products',
-        timestamps: true,
+        timestamps: false, // aca era false, me daba error el true porque no estaba en la tabla el create at etc etc
         
     }
     

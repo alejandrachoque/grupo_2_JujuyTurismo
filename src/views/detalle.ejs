@@ -26,17 +26,17 @@
                     <div class="box secondDetalle"
                         style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
                         <div class="content">
-                            <span><%= pFind.firstName %></span>
+                            <span><%= product.FirstName %></span>
                             <p>
-                                <%= pFind.description %>
+                                <%= product.Description %>
                                 <br>
-                                ¡A tan solo: <%= pFind.price %>$!
+                                ¡A tan solo: <%= product.Price %>$!
                             </p>
                             <a href="#" class="btn"> ¡Comprar!</a>
                             <br>
-                            <a href="/product/editar/<%= pFind.id %>" class="btn">Editar</a>
+                            <a href="/product/editar/<%= product.id %>" class="btn">Editar</a>
                             <a href="/product/crear" class="btn">Agregar producto</a>
-                            <form action="/product/delete/<%=pFind.id%>?_method=DELETE" method="POST">
+                            <form action="/product/delete/<%=product.id%>?_method=DELETE" method="POST">
                                <button type="submit" class="btn">Borrar</button>
                             </form>
                         </div>
