@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head.ejs') %>
+    <%- include('./partials/head.ejs') %>
 
 <body>
 
@@ -23,25 +23,25 @@
 
     <!-- seccion del home -->
     <section class="home" id="home">
-
-        <div class="box second">
-            <div class="content">
-                <span style="color: black;"> Bienvenido </span> <br>
-                <span style="color: black;"> nombre:  <%= user.FirstName %> </span> <br>
-                <span style="color: black;"> apellido:  <%= user.LastName %> </span> <br>
-                <span style="color: black;"> email:  <%= user.Email %> </span> <br>
-            </div>
-            <a href="/register/logout">Salir</a>
-            <a href="/register/editar/<%=user.id%>">Editar</a>
-            <a href="/product/crear" class="btn">Agregar producto</a>
-        </div>
-
+                    <div class="box secondDetalle"
+                        style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
+                        <div class="content">
+                            <article class="">
+                                <p>bienvenido</p>
+                                <p>nombre:  <%= user.FirstName %></p>
+                                <p>apellido:  <%= user.LastName %></p> 
+                                <p>email:  <%= user.Email %> </p>  
+                            </article>   
+                            <a href="/register/logout" class="btn">Salir</a>
+                            <a href="/product/crear" class="btn">Agregar producto</a>
+                        </div>
+                    </div>
     </section>
     <!-- seccion del home -->
 
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>

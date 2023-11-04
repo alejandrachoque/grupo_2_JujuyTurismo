@@ -35,13 +35,12 @@
                             <a href="#" class="btn"> ¡Comprar!</a>
                             <br>
                             <a href="/product/editar/<%= product.id %>" class="btn">Editar</a>
-                            <a href="/product/crear" class="btn">Agregar producto</a>
                             <form action="/product/delete/<%=product.id%>?_method=DELETE" method="POST">
                                <button type="submit" class="btn">Borrar</button>
                             </form>
                         </div>
                         <div class="content">
-                                <iframe class="video" src="https://www.youtube.com/embed/S2wJxDBZ_l0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe class="video" src="<%= product.Link %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
     </section>

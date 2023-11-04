@@ -23,20 +23,28 @@
 
     <!-- seccion del home, aca en el home faltan las imagenes de fondo, no estan porque en la base de datos no hay una tabla que las contenga-->
     <section class="home" id="home" >
+        <% if(products.length == 0) { %>
+            <div class="  box secondDetalle"style=" background: url('https://c1.wallpaperflare.com/preview/916/1/165/flame-north-jujuy-coya.jpg') no-repeat;" >
+                <section class="content">
+                        <article class="">
+                            <p>Sin articulos, ingrese a su perfil para agregar alguno</p>
+                        </article>           
+                </section>
+            </div>
+        <% }else{ %>
         <% products.forEach((products) => { %>
             <div class="  box secondDetalle"style=" background: url('/images/products/<%= products.Image %>') no-repeat;" >
                 <section class="content">
-                    
                         <article class="">
                             <span><%= products.FirstName %></span>     
                             <p><%= products.FirstDescription %></p>
                             <h3 class="precioP"> Desde: <%= products.Price %> pesos</h3> 
                         </article>   
                         <a href="/product/detalle/<%= products.id %>" class="btn">¡Mas detalles!</a>
-                        
                 </section>
             </div>	
             <% }) %>
+        <% } %>
             
     </section>
     <!-- seccion del home -->
