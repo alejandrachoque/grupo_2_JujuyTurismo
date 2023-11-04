@@ -4,11 +4,12 @@ const productsFilePath = path.join(__dirname, '../data/products.json'); // guard
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // lo leo y guardo en products
 const products= require("../data/products.json")
 const db = require('../database/models')
+const multerino = require('../middlewares/multerProd')
 const productNewEditController = {
 
 
     //muestra el formulario de agregar producto
-    crear: (req,res) => {
+    crear: (req,res) => { 
         //console.log('entre a crear')
         res.render('productNew');
         
@@ -27,8 +28,12 @@ const productNewEditController = {
      //aun no esta implementado
      //para crear el producto la logica
     AllProducts: async (req, res) => {
+        
+        console.log("req.body.img")
         await db.Product.create({
             FirstName: req.body.FirstName,
+            Image: req.file.filename,
+            Link: req.body.Link,
             FirstDescription: req.body.FirstDescription,
             Description: req.body.Description,
             Price: req.body.Price
@@ -83,7 +88,7 @@ const productNewEditController = {
         const test = db.Product.findAll()
         .then((products) => {
             res.render('productList', { products })
-            console.log("entre: " + {test})
+            
         })
         /*
         res.render('productList', {

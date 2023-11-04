@@ -24,7 +24,7 @@
     <!-- seccion del home, aca en el home faltan las imagenes de fondo, no estan porque en la base de datos no hay una tabla que las contenga-->
     <section class="home" id="home" >
         <% products.forEach((products) => { %>
-            <div class="  box secondDetalle"style=" background: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/86000/86475-Jujuy-Province.jpg) no-repeat;" >
+            <div class="  box secondDetalle"style=" background: url('/images/products/<%= products.Image %>') no-repeat;" >
                 <section class="content">
                     
                         <article class="">

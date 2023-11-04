@@ -7,7 +7,7 @@ const pathFile= path.join(__dirname,'..','..','public','images','products')
 cb(null,pathFile)
     },
     filename: function(req,file,cb){
-const newName= 'img-' + Date.now()+path.extname(file.originalname);
+const newName= 'Imagen-' + Date.now()+path.extname(file.originalname);
 cb(null, newName)
     }
     

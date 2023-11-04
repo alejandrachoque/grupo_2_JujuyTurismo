@@ -21,7 +21,7 @@ router.get("/crear", productNewEditController.crear);
 //router.post("/", productNewEditController.creando)
 //crea
 //implementamos multer
-router.post('/',productNewEditController.AllProducts)
+router.post('/',uploadMulterProd.single('Imagen'),productNewEditController.AllProducts)
 
 //router.post('/', productNewEditController.momentaneo); 
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle
