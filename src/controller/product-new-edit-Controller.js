@@ -122,6 +122,14 @@ const productNewEditController = {
 
         res.redirect('/product')
         */
+    },
+    comprar: async (req,res)=>{
+        console.log("entre")
+        await db.User_prod.create({
+            id_user: req.session.userLogged.id, //usuario
+            id_produc: req.params.id  //producto
+        })
+        res.redirect('/product')
     }
 }
 

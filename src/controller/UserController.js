@@ -152,7 +152,6 @@ const userController={
     },*/
     perfil:  (req, res) => { 
         res.render('perfil', {
-           
             user: req.session.userLogged
         })
         

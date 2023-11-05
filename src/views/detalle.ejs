@@ -32,7 +32,10 @@
                                 <br>
                                 ¡A tan solo: <%= product.Price %>$!
                             </p>
-                            <a href="#" class="btn"> ¡Comprar!</a>
+                            <form action="/product/comprar/<%=product.id%>" method="POST">
+                                <button type="submit" class="btn">Comprar!</button>
+                             </form>
+                            
                             <br>
                             <a href="/product/editar/<%= product.id %>" class="btn">Editar</a>
                             <form action="/product/delete/<%=product.id%>?_method=DELETE" method="POST">
