@@ -2,6 +2,7 @@ const express= require ('express');
 const app= express();
 const path= require('path');
 const mainRouter = require("./src/routes/mainRouter");
+const carroRuta = require("./src/routes/carroRouter")
 const userRuta= require('./src/routes/User')
 const productNewEditController = require("./src/routes/product-new-edit-Router");
 const methodOverride = require('method-override')
@@ -17,6 +18,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use( '/', mainRouter);
+app.use('/carro', carroRuta);
 app.use('/register',userRuta)
 app.use('/product', productNewEditController);
 app.set('view engine', 'ejs');

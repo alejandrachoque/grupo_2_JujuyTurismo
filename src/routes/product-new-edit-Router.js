@@ -24,6 +24,7 @@ router.post('/',uploadMulterProd.single('Imagen'),productNewEditController.AllPr
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle
 //carrito de compras//
 
+
 //delete producto
 router.delete('/delete/:id',productNewEditController.borrar)
 module.exports = router;

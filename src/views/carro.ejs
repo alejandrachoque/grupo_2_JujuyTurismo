@@ -11,65 +11,26 @@
 
 
 
-    <main class="form-carro">
-        <div class="carro">
-            <h1 class="carro-text">Carro de compras</h1>
-            <form action="/carro" method="post">
-                <div class="form-datos-usuario">
-                    <p><strong>Datos del usuario</strong></p>
-                    <div class="box-datos">
-                        <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
-                        <label for="Nombre"></label>
-                    </div>
-
-                    <div class="box-datos">
-                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
-                        <label for="Apellido"></label>
-                    </div>
-
-                    <div class="box-datos">
-                        <input type="email" name="correo" id="correo" placeholder="Correo Electrónico">
-                        <label for="correo"></label>
-                    </div>
-
-                    <div class="box-datos">
-                        <input type="number" name="telefono" id="telefono" placeholder="Teléfono">
-                        <label for="telefono"></label>
-                    </div>
-                </div>
-
-                <div class="form-datos-reserva">
-                    <p><strong>Datos de la reserva</strong></p>
-
-                    <div class="box-datos">
-                        <label>Fecha de reserva: </label>
-                        <input type="date" name="fecha">
-                    </div>
-
-                    <div class="box-datos">
-                        <label>Cantidad de personas: </label>
-                        <input type="number" name="cantidad-personas" id="cantidad" placeholder="Cantidad de personas">
-                    </div>
-
-                    <div class="box-datos">
-                        <label>Método de pago: </label>
-                        <select name="medio-pago">
-                            <option value="1">Efectivo</option>
-                            <option value="2">Transferencia</option>
-                            <option value="3">Débito</option>
-                            <option value="3">Tarjeta de crédito</option>
-                        </select>
-                    </div>
-
-                    <div class="box-datos">
-                        <textarea name="comentario" id="comentario">Comentarios...</textarea>
-                    </div>
-                </div>
-                <button type="submit" class="boton-carro">Comprar</button>
-
-            </form>
+    <section class="home" id="home">
+        <div class="box secondDetalle"
+            style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
+            <div class="content">
+                <article class="">
+                    <p>bienvenido al carrito de compras <%= user.FirstName %>, tenes los siguientes productos:</p>
+                </article>   
+                <% for( let [productos] of products){ %>
+                   
+                                <article class="">
+                                    <span><%= productos.FirstName %></span>     
+                                    <p><%= productos.FirstDescription %></p>
+                                    <h3 class="precioP"> Desde: <%= productos.Price %> pesos</h3> 
+                                </article>   
+                    <% }%>
+                    
+                <a href="/register/editar/<%=user.id%>" class="btn">Editar Datos del usuario</a>
+            </div>
         </div>
-    </main>
+</section>
 
 </body>
 
