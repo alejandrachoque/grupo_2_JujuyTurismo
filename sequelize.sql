@@ -6,9 +6,9 @@
 -- Tiempo de generación: 04-11-2023 a las 08:12:32
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
-DROP DATABASE IF EXISTS sequelize(i);
-CREATE DATABASE sequelize(i);
-USE sequelize(i);
+DROP DATABASE IF EXISTS sequelize;
+CREATE DATABASE sequelize;
+USE sequelize;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
