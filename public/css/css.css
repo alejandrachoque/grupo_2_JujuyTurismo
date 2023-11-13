@@ -457,6 +457,12 @@ div.log{
         background-color: white;
         
 }
+/* estilos */
+.home .box .content{
+  padding: 10px;
+}
+
+
 }
 
 @media (max-width:479px){
@@ -672,9 +678,7 @@ form#logs input:focus {
     }
           }
         
-        @media (max-width:991px){
-
-        }
+        
         @media (max-width:1200px){
 
         }
@@ -769,3 +773,17 @@ p strong{
   height: 110vh;
   justify-content: center;
 }
+.home .box .content{
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px #000;
+  border-radius: 6px;
+
+}
+@media (min-width:991px){
+  .home .box .content {
+    text-align: center;
+    padding: 10px;
+        }}
+    .home .box .content p{
+      color: salmon
+    }
