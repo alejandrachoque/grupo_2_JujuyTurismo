@@ -29,24 +29,31 @@
         <form action="/register" method="post" id="registro" enctype="multipart/form-data">
             
             <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" value="<%=locals.old&&old.Nombre%>">
+            
             <%if(locals.errors && errors.Nombre){%>
                 <p class= "feedback"style="color: firebrick"> <%=errors.Nombre.msg %> </p>
             <% } %>
             <label for="Nombre"></label>
 
             <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" value="<%=locals.old&&old.Apellido%>">
+            
             <%if(locals.errors && errors.Apellido){%>
                 <p class= "feedback" style="color: firebrick;"><%= errors.Apellido.msg %> </p>
             <% } %>
             <label for="Apellido"></label>
 
             <input type="email" name="email" id="email" placeholder="E-mail" value="<%=locals.old&&old.email%>">
+           
             <%if(locals.errors && errors.email){%>
                 <p class= "feedback" style="color: firebrick"><%= errors.email.msg %> </p>
             <% } %>
             <label for="email"></label>
             
             <input type="password" name="password" placeholder="Contraseña" id="contraseña">
+            <div class="alerta">
+                <ul>
+                    
+                </ul> </div>
             <%if(locals.errors && errors.password){%>
                 <p class= "feedback"style="color: firebrick"> <%=errors.password.msg %> </p>
             <% } %>
@@ -62,6 +69,6 @@
         </div>
     </div>
     </main>
-    
+    <script src="js/registro.js"></script>
 </body>
 </html>
