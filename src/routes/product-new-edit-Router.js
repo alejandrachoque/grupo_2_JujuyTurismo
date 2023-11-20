@@ -5,11 +5,12 @@ const router = express.Router();
 const uploadMulterProd= require('../middlewares/multerProd');
 const productNewEditController = require("../controller/product-new-edit-Controller")
 const usuarioNoLogueado = require('../middlewares/noLogueado')
+const productovalidacion = require('../middlewares/validacionesProduct')
 router.get('/', productNewEditController.listar);
 router.get('/detalle/:id', productNewEditController.detalle); // <base href="/"> me soluciono todos los problemas
 
 router.get('/editar/:id', productNewEditController.editar); // 
-router.put('/editar/:id', productNewEditController.actualizar);
+router.put('/editar/:id',uploadMulterProd.single('Imagen'),productovalidacion, productNewEditController.actualizar);
 //router.put('/editar', productNewEditController.momentaneo); // 
 router.get("/crear", productNewEditController.crear);
 //router.post("/", productNewEditController.creando)
@@ -18,7 +19,7 @@ router.get("/crear", productNewEditController.crear);
 router.post("/comprar/:id",usuarioNoLogueado, productNewEditController.comprar)
 //crea
 //implementamos multer
-router.post('/',uploadMulterProd.single('Imagen'),productNewEditController.AllProducts)
+router.post('/',uploadMulterProd.single('Imagen'),productovalidacion,productNewEditController.AllProducts)
 
 //router.post('/', productNewEditController.momentaneo); 
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle

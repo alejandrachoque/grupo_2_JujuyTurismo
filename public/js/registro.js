@@ -5,7 +5,7 @@ let formulario= document.querySelector('form#registro')
 
 
 formulario.addEventListener('submit',(e)=>{
-    e.preventDefault()
+    //e.preventDefault() // estaba el prevent aplicado y no mandaba el form
 
 let nombre= document.querySelector('input#Nombre')
 let apellido= document.querySelector('input#Apellido')
@@ -32,7 +32,7 @@ function verificarErrores(){
 
         if(contraseña.value==''){
             errores.push('Completa tu contraseña')
-        }else if(contraseña.value.length>=8){
+        }else if(contraseña.value.length < 8){
             errores.push('La contraseña debe tener almenos 8 caracteres')
         }
         return errores

@@ -93,7 +93,7 @@ const userController={
 
 
                 console.log("creado: ")
-                res.redirect('/');
+                res.redirect('/register/login');
                     /*let newUser={
                         ...req.body,
                     contraseña:bcrypt.hashSync(req.body.contraseña,10),

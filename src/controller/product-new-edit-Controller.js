@@ -5,6 +5,7 @@ const productsFilePath = path.join(__dirname, '../data/products.json'); // guard
 const products= require("../data/products.json")
 const db = require('../database/models')
 const multerino = require('../middlewares/multerProd')
+const {validationResult}= require('express-validator')
 const productNewEditController = {
 
 
@@ -29,16 +30,27 @@ const productNewEditController = {
      //para crear el producto la logica
     AllProducts: async (req, res) => {
         
-        console.log("req.body.img")
-        await db.Product.create({
-            FirstName: req.body.FirstName,
-            Image: req.file.filename,
-            Link: req.body.Link,
-            FirstDescription: req.body.FirstDescription,
-            Description: req.body.Description,
-            Price: req.body.Price
-        })
-        res.redirect('/product')
+        
+        const errors= validationResult(req)
+        if(errors.isEmpty()){
+            await db.Product.create({
+                FirstName: req.body.FirstName,
+                Image: req.file.filename,
+                Link: req.body.Link,
+                FirstDescription: req.body.FirstDescription,
+                Description: req.body.Description,
+                Price: req.body.Price
+            })
+            res.redirect('/product')
+        }else{
+            res.render('productNew',{
+                errors:errors.mapped(),
+                old:req.body
+            })
+        }
+
+        
+        
         /*
 		let newProduct = req.body;
 		newProduct.id = `${products.length +1}`
@@ -63,8 +75,16 @@ const productNewEditController = {
     },    
     actualizar: async (req,res) => {
 
-        await db.Product.update( req.body, { where: {id: req.params.id}})
-        res.redirect('/product')
+        const errors= validationResult(req)
+        if(errors.isEmpty()){
+            await db.Product.update( req.body, { where: {id: req.params.id}}) // lo unico es que no edita la imagen
+            res.redirect('/product')
+        }else{
+            res.render('productNew',{
+                errors:errors.mapped(),
+                old:req.body
+            })
+        }
         /*
         const idP = req.params;
         console.log(idP);
