@@ -5,6 +5,9 @@ const mainRouter = require("./src/routes/mainRouter");
 const carroRuta = require("./src/routes/carroRouter")
 const userRuta= require('./src/routes/User')
 const productNewEditController = require("./src/routes/product-new-edit-Router");
+//apis
+const apiUsers = require('./src/routes/api/apiUsers')
+const apiProduct = require('./src/routes/api/apiProducts')
 const methodOverride = require('method-override')
 const session = require('express-session');
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -21,6 +24,10 @@ app.use( '/', mainRouter);
 app.use('/carro', carroRuta);
 app.use('/register',userRuta)
 app.use('/product', productNewEditController);
+//apis
+app.use('/api/users', apiUsers)
+app.use('/api/products', apiProduct)
+
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
