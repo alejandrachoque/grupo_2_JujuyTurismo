@@ -28,17 +28,10 @@ const userController={
                 Email: req.body.email
             }
         })
-        let usuarioALoguear = buscadorEmail //users.find(em => em['email'] === req.body.email);
+        let usuarioALoguear = buscadorEmail 
         if(usuarioALoguear){
-            console.log("entre email")
-            let buscadorContra = await db.User.findOne({
-                where: {
-                    Password: req.body.password
-                }
-            })
-            let esSuContra = buscadorContra //bcrypt.compareSync(req.body.password, usuarioALoguear.password);
+            let esSuContra = bcrypt.compareSync( req.body.password ,usuarioALoguear.Password ); // me daba error porque en la base de datos era menor a la cantidad de caracteres que guardaba el hasheo
             if(esSuContra){
-                console.log("entre password")
                 delete usuarioALoguear.password;
                 req.session.userLogged = usuarioALoguear;
                 return res.redirect('/register/perfil'); // va al perfil directo si entra
@@ -46,7 +39,7 @@ const userController={
             return res.render('login', {
                 errors: {
                     email: {
-                        msg: 'Datos erroneos'
+                        msg: 'Credenciales erroneas'
                     }
                 }
             })
@@ -59,7 +52,6 @@ const userController={
                 errors:errors.mapped(),
                 old:req.body
             })}
-        //res.redirect('/')
     },
     salir: (req, res) =>{
         req.session.destroy()
@@ -67,37 +59,17 @@ const userController={
     },
     userNew: async (req, res) => {
                 const errors= validationResult(req)
-                //console.log(errors.mapped());
                 if(errors.isEmpty()){
-                    //let asd = bcrypt.hashSync(req.body.password,10)
                         await db.User.create({
                             FirstName: req.body.Nombre,
                             LastName: req.body.Apellido,
                             Email: req.body.email,
-                            Password: req.body.password // falta la encriptacion
+                            Password: bcrypt.hashSync(req.body.password,10) // encriptacion
                         })
-                /*
-                newUser= req.body
-                newUser={
-                    ...req.body,
-                    password: bcrypt.hashSync(req.body.password,10),
-                    foto:req.file.filename    
-                }
-                        newUser.id = `${users.length +1}`
-                        
-                        users.push(newUser);
-                    
-                    
-                        fs.writeFileSync(userPath, JSON.stringify(users)); //cambia de javascript a json para poder guardar products
-                        */
 
 
                 console.log("creado: ")
-                res.redirect('/register/login');
-                    /*let newUser={
-                        ...req.body,
-                    contraseña:bcrypt.hashSync(req.body.contraseña,10),
-                    perfil: req.file?.filename*/       
+                res.redirect('/register/login');     
                 }else{
                     res.render('register',{
                         errors:errors.mapped(),
@@ -110,17 +82,6 @@ const userController={
         const u = await req.session.userLogged
         res.render('registerEdit', {u})
 
-
-        /*
-        //para agregar cuando este la base de datos
-        const idU = req.params;
-        //console.log('idP:' + idP.id)
-		const userToEdit = users.find((u) => u.id == idU.id);
-        //console.log('productToEdit ' + productToEdit.id)
-		res.render('productEdit', {productToEdit}) 
-        //esto va en el form -> action -> html: /edit/<%= productToEdit.id %>?_method=PUT
-        */
-
     },
     actualizar: async (req,res) => {
       
@@ -132,24 +93,7 @@ const userController={
         res.redirect('/register/perfil')
         
     },
-    
-    /*    
-    momentaneo: (req,res) => {
-        res.redirect('/');
-        
-    },
-    listar: (req,res) => {
-        res.render('productList', {
-			arrayP: products
-		})
-    },
-    detalle: (req,res) => {
-        const idP = req.params.id;
-        //console.log('idP:' + idP)
-		const pFind = products.find((p) => p.id == idP); // no se porque no me toma con "===" estricto
-        //console.log('pFind:' + pFind.id)
-		res.render('detalle', {pFind})
-    },*/
+
     perfil:  (req, res) => { 
         res.render('perfil', {
             user: req.session.userLogged

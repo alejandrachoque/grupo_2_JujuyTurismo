@@ -9,6 +9,15 @@ const productNewEditController = require("./src/routes/product-new-edit-Router")
 const apiUsers = require('./src/routes/api/apiUsers')
 const apiProduct = require('./src/routes/api/apiProducts')
 const methodOverride = require('method-override')
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
+
 const session = require('express-session');
 app.use(express.static(path.resolve(__dirname, 'public')));
 

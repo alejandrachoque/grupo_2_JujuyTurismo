@@ -10,10 +10,10 @@ router.get('/', productNewEditController.listar);
 router.get('/detalle/:id', productNewEditController.detalle); // <base href="/"> me soluciono todos los problemas
 
 router.get('/editar/:id', productNewEditController.editar); // 
-router.put('/editar/:id',uploadMulterProd.single('Imagen'),productovalidacion, productNewEditController.actualizar);
-//router.put('/editar', productNewEditController.momentaneo); // 
+router.put('/editar/:id',productovalidacion,uploadMulterProd.single('Imagen'), productNewEditController.actualizar);
+
 router.get("/crear", productNewEditController.crear);
-//router.post("/", productNewEditController.creando)
+
 
 //compra productos
 router.post("/comprar/:id",usuarioNoLogueado, productNewEditController.comprar)
@@ -21,7 +21,7 @@ router.post("/comprar/:id",usuarioNoLogueado, productNewEditController.comprar)
 //implementamos multer
 router.post('/',uploadMulterProd.single('Imagen'),productovalidacion,productNewEditController.AllProducts)
 
-//router.post('/', productNewEditController.momentaneo); 
+
 router.put('/:id', productNewEditController.detalle); //este seria el put de detalle
 //carrito de compras//
 
