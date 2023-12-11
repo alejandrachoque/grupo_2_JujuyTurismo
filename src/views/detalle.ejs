@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+
+<body>
+
+    <!-- seccion del header -->
+    <%- include('./partials/header.ejs') %>
+    <!-- seccion del header -->
+
+    <!-- seccion de boton de busqueda -->
+    <div class="search-form">
+
+        <div id="close-search" class="fas fa-times"></div>
+
+        <form action="">
+            <input type="search" name="" placeholder="Que estas buscando?...." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+    <!-- seccion de boton de busqueda -->
+
+    <!-- seccion del home -->
+    <section class="home" id="home">
+                    <div class="box secondDetalle"
+                        style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
+                        <div class="content">
+                            <span><%= product.FirstName %></span>
+                            <p>
+                                <%= product.Description %>
+                                <br>
+                                ¡A tan solo: <%= product.Price %>$!
+                            </p>
+                            <form action="/product/comprar/<%=product.id%>" method="POST">
+                                <button type="submit" class="btn">Comprar!</button>
+                             </form>
+                            
+                            <br>
+                            <% if (session.userLogged) { %>
+                            <% if (session.userLogged.Email =='admin@admin.com') { %>
+                            <a href="/product/editar/<%= product.id %>" class="btn">Editar</a>
+                            <form action="/product/delete/<%=product.id%>?_method=DELETE" method="POST">
+                               <button type="submit" class="btn">Borrar</button>
+                            </form>
+                            <%}%>
+                            <%}%>
+                                
+
+                        </div>
+                        <div class="content">
+                                <iframe class="video" src="<%= product.Link %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+    </section>
+    <!-- seccion del home -->
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

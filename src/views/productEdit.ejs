@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <!-- seccion del header -->
+    <%- include('./partials/header.ejs') %>
+    <!-- seccion del header -->
+
+    <!-- seccion de boton de busqueda -->
+    <div class="search-form">
+
+        <div id="close-search" class="fas fa-times"></div>
+
+        <form action="">
+            <input type="search" name="" placeholder="Que estas buscando?...." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+    <!-- seccion de boton de busqueda -->
+
+    <!-- seccion del home  -->
+    <section class="home" id="home">
+        <div class="box secondDetalle"
+            style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat; justify-content: center;">
+            <div class="content">
+                <div class="col-12">
+                    <form action="/product/editar/<%= product.id %>?_method=PUT" method="post" id="producto" class="formulario" enctype="multipart/form-data">
+                        <div class="row product-detail">
+                            <div class="col-12 col-md-6">
+                                <label for="FirstName" class="form-label">Nombre del producto a editar:</label>
+                                <input type="text" id="FirstName" name="FirstName"  class="form-input" value="<%= product.FirstName %>">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="FirstDescription" class="form-label">Titulo a editar:</label>
+                                <input type="text" id="FirstDescription" name="FirstDescription"  class="form-input" value="<%= product.FirstDescription %>">
+                            </div>
+                            <div class="col-12">
+                                <label for="Description" class="form-label">Descipción:</label>
+                                <input name="Description" id="Description"  class="form-input" value="<%= product.Description %>">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="Price" class="form-label">Precio del producto:</label>
+                                <input type="text" id="Price" name="Price"  class="form-input" value="<%= product.Price %>">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="Link" class="form-label">Link del video:</label>
+                                <input type="text" id="Link" name="Link" class="form-input" value="<%= product.Link %>">
+                            </div>
+                            <div class="col-12">
+                                <label for="Imagen" class="form-label">Imagen del producto:</label>
+                                <% if (session.errors && session.errors.Imagen) { %>
+                                    <p class="feedback" style="color: firebrick"><%= session.errors.Imagen.msg %></p>
+                                <% } %>
+                                <input type="file" id="Imagen" name="Imagen"  class="btn"  >
+                            </div>
+                           
+                            <div class="col-12">
+                                <button type="submit" class="btn">Editar producto</button>
+                            </div>
+                            
+                    </div>  <div class="alerta">
+                                <ul>
+                                    
+                                </ul> </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
+    <!-- seccion del home -->
+
+
+    <script src="js/product.js"></script>
+</body>
+
+</html>
