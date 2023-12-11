@@ -10,7 +10,7 @@ router.get('/', productNewEditController.listar);
 router.get('/detalle/:id', productNewEditController.detalle); // <base href="/"> me soluciono todos los problemas
 
 router.get('/editar/:id', productNewEditController.editar); // 
-router.put('/editar/:id',productovalidacion,uploadMulterProd.single('Imagen'), productNewEditController.actualizar);
+router.put('/editar/:id',uploadMulterProd.single('Imagen'),productovalidacion, productNewEditController.actualizar);
 
 router.get("/crear", productNewEditController.crear);
 

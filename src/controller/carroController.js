@@ -20,8 +20,24 @@ const carroController={
 
         res.render('carro', {
             user: req.session.userLogged,
-            products: products
+            products: products,
+            session: req.session 
         })
+    },
+    quitar: async (req, res) => {
+        console.log("entre a quitar")
+        const producto = await db.Product.findByPk(req.params.id);
+
+        await db.User_prod.destroy({
+            where: {
+                id_user: req.session.userLogged.id, // Suponiendo que req.user contiene la información del usuario autenticado
+                id_produc: producto.id,
+            },
+        });
+        
+            
+        res.redirect('/carro', { session: req.session });
+        
     }
 
 }

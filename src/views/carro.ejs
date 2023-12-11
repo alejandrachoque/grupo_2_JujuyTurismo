@@ -16,18 +16,35 @@
             style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
             <div class="contentc">
                 <article class="">
-                    <p>bienvenido al carrito de compras <%= user.FirstName %>, tenes los siguientes productos:</p>
+                    <p>bienvenido al carrito de compras <%= user.FirstName %></p>
+                    <% if(products != 0){ %>
+                        <p> tenes los siguientes productos:</p>
+                        <%}else{%>
+                    
+                            <p>No tenes productos comprados!</p>
+                            <p>Visita la seccion de Paquetes para conocer nuestras ofertas!</p>
+                            <a href="/product" class="btn">Paquetes</a>
+                            <% } %>
+                    
                 </article>   
+                <% let total = 0 %>
+                
                 <% for( let [productos] of products){ %>
-                   
+                   <form action="/quitar/<%= productos.id %>?_method=DELETE" method="POST">
                                 <article class="">
                                     <span><%= productos.FirstName %></span>     
                                     <p><%= productos.FirstDescription %></p>
                                     <h3 class="precioP"> Desde: <%= productos.Price %> pesos</h3> 
                                 </article>   
+                                <%  total = total + productos.Price %> 
+                                <button type="submit" class="btn" >Eliminar producto</button>
+                    </form>
                     <% }%>
+                    <% if(total != 0){ %>
+                        <p> Su total es: <%= total %> en pesos</p>
+                        <%}%>
                     
-                <a href="/register/editar/<%=user.id%>" class="btn">Editar Datos del usuario</a>
+                
             </div>
         </div>
 </section>

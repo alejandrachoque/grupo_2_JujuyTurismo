@@ -47,7 +47,7 @@
             <% } %>
             <label for="email"></label>
             
-            <input type="password" name="password" placeholder="Contraseña" id="contraseña" value="<%=u.Password%>" disabled>
+            <input type="password" name="password" placeholder="Contraseña" id="contraseña" >
             <%if(locals.errors && errors.password){%>
                 <p class= "feedback"style="color: firebrick"> <%=errors.password.msg %> </p>
             <% } %>

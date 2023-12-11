@@ -10,7 +10,7 @@ const {validationResult}= require('express-validator')
 const bcrypt= require('bcryptjs')
 const userController={
     register: (req,res)=>{
-        res.render('register')
+        res.render('register', { session: req.session })
     },
     /*crear:(req,res)=>{
         res.redirect('/')
@@ -18,7 +18,7 @@ const userController={
 
     login:(req,res)=>{
         //console.log(req.session)
-        res.render('login')
+        res.render('login', { session: req.session })
     },
     entrar: async (req,res)=>{ 
         const errors= validationResult(req)
@@ -41,16 +41,18 @@ const userController={
                     email: {
                         msg: 'Credenciales erroneas'
                     }
-                }
+                },
+                session: req.session
             })
         }else{
-            res.render('login') // falta mensaje de usuario no existe
+            res.render('login', { session: req.session }) // falta mensaje de usuario no existe
         }
         
         }else{
             res.render('login',{
                 errors:errors.mapped(),
-                old:req.body
+                old:req.body,
+                session: req.session 
             })}
     },
     salir: (req, res) =>{
@@ -73,21 +75,24 @@ const userController={
                 }else{
                     res.render('register',{
                         errors:errors.mapped(),
-                        old:req.body
+                        old:req.body,
+                        session: req.session
                     })
                 }
 
 	},
     editar: async (req,res) => {
         const u = await req.session.userLogged
-        res.render('registerEdit', {u})
+        res.render('registerEdit', {u, session: req.session})
 
     },
     actualizar: async (req,res) => {
       
 
         await db.User.update( {FirstName: req.body.Nombre,
-                               LastName: req.body.Apellido}, { where: {id: req.params.id}}) 
+                               LastName: req.body.Apellido,
+                               Password: bcrypt.hashSync(req.body.password,10) },
+                            { where: {id: req.params.id}}) 
         //
       
         res.redirect('/register/perfil')
@@ -96,7 +101,8 @@ const userController={
 
     perfil:  (req, res) => { 
         res.render('perfil', {
-            user: req.session.userLogged
+            user: req.session.userLogged,
+            session: req.session 
         })
         
     }

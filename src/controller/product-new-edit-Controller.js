@@ -12,7 +12,7 @@ const productNewEditController = {
     //muestra el formulario de agregar producto
     crear: (req,res) => { 
         //console.log('entre a crear')
-        res.render('productNew');
+        res.render('productNew', { session: req.session });
         
     },
     AllProducts: async (req, res) => {
@@ -32,34 +32,41 @@ const productNewEditController = {
         }else{
             res.render('productNew',{
                 errors:errors.mapped(),
-                old:req.body
+                old:req.body,
+                session: req.session
             })
         }
         
 	},
     editar:  async (req,res) => {
         const product = await db.Product.findByPk(req.params.id)
-        res.render('productEdit', {product})
+        res.render('productEdit', { product, session: req.session})
         
     },    
-    actualizar: async (req,res) => {
-
-        const errors= validationResult(req)
-        if(errors.isEmpty()){
-            await db.Product.update( req.body, { where: {id: req.params.id}}) // lo unico es que no edita la imagen
-            res.redirect('/product')
-        }else{
-            res.render('productNew',{
-                errors:errors.mapped(),
-                old:req.body
-            })
+    actualizar: async (req, res) => {
+        console.log("entre");
+        const errors = validationResult(req);
+    
+        if (req.session.errors && req.session.errors.Imagen) {
+            req.session.errors.Imagen = null;
         }
-        
+    
+        if (errors.isEmpty()) {
+            if (req.file) {
+                const Img = req.file.filename;  
+                req.body.Image = Img;
+            }
+            await db.Product.update(req.body, { where: { id: req.params.id } });
+            res.redirect('/product');
+        } else {
+            req.session.errors = errors.mapped();
+            res.redirect(`/product/editar/${req.params.id}`); // la unica solucio que pude encontrar fue forzandolo
+        }
     },
     listar: (req,res) => {
         const test = db.Product.findAll()
         .then((products) => {
-            res.render('productList', { products })
+            res.render('productList', { products, session: req.session})
             
         })
         
@@ -68,7 +75,7 @@ const productNewEditController = {
 
         db.Product.findByPk(req.params.id)
         .then(product => {
-            res.render('detalle', { product})
+            res.render('detalle', { product, session: req.session})
         })
         
     },
@@ -83,7 +90,7 @@ const productNewEditController = {
             id_user: req.session.userLogged.id, //usuario
             id_produc: req.params.id  //producto
         })
-        res.redirect('/product')
+        res.redirect('/product', { session: req.session })
     }
 }
 

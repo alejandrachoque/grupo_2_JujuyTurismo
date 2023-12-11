@@ -5,8 +5,14 @@
         <div id="nav-close" class="fas fa-times"></div>
         <a href="/">inicio</a>
         <a href="/product">paquetes</a>
-        <a href="/register">Registro</a>
-        <a href="/register/login">Ingresar</a>
+        <% if (!session.userLogged) { %>
+            <a href="/register">Registro</a>
+            <a href="/register/login">Ingresar</a>
+        <% } else{ %>
+
+            <a href="/register/perfil">Perfil</a>
+            
+            <%}%>
     </nav>
 
     <div class="iconos">

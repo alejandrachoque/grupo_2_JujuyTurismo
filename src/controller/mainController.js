@@ -1,13 +1,13 @@
 const path = require("path");
 const mainController = {
     index: (req,res) => {
-        res.render('index');
+        res.render('index', { session: req.session });
     },
     carro:(req,res)=>{
-        res.render('carro')
+        res.render('carro', { session: req.session })
     },
     compraCarro: (req,res)=>{
-        res.redirect('/')
+        res.redirect('/', { session: req.session })
     }
 }
 
