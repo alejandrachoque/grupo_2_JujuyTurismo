@@ -36,7 +36,7 @@ const carroController={
         });
         
             
-        res.redirect('/carro', { session: req.session });
+        res.redirect('/carro');
         
     }
 

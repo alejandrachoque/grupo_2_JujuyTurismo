@@ -33,6 +33,7 @@ const productNewEditController = {
             res.render('productNew',{
                 errors:errors.mapped(),
                 old:req.body,
+                session: req.session
             })
         }
         
