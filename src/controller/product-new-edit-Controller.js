@@ -90,7 +90,7 @@ const productNewEditController = {
             id_user: req.session.userLogged.id, //usuario
             id_produc: req.params.id  //producto
         })
-        res.redirect('/product', { session: req.session })
+        res.redirect('/product')
     }
 }
 
