@@ -19,9 +19,9 @@ let searchForm = document.querySelector('.search-form');
 //    searchForm.classList.add('active');
 //}
 
-document.querySelector('#close-search').onclick = () => {
-    searchForm.classList.remove('active');
-}
+//document.querySelector('#close-search').onclick = () => {
+//    searchForm.classList.remove('active');
+//}
 // funcionalidad barra de busqueda
 
 
