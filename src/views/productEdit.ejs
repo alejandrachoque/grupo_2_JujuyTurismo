@@ -31,22 +31,37 @@
                         <div class="row product-detail">
                             <div class="col-12 col-md-6">
                                 <label for="FirstName" class="form-label">Nombre del producto a editar:</label>
+                                <% if (session.errors && session.errors.FirstName) { %>
+                                    <p class="feedback" style="color: firebrick"><%= session.errors.FirstName.msg %></p>
+                                <% } %>
                                 <input type="text" id="FirstName" name="FirstName"  class="form-input" value="<%= product.FirstName %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="FirstDescription" class="form-label">Titulo a editar:</label>
+                                <% if (session.errors && session.errors.FirstDescription) { %>
+                                    <p class="feedback" style="color: firebrick"><%= session.errors.FirstDescription.msg %></p>
+                                <% } %>
                                 <input type="text" id="FirstDescription" name="FirstDescription"  class="form-input" value="<%= product.FirstDescription %>">
                             </div>
                             <div class="col-12">
                                 <label for="Description" class="form-label">Descipción:</label>
+                                <% if (session.errors && session.errors.Description) { %>
+                                    <p class="feedback" style="color: firebrick"><%= session.errors.Description.msg %></p>
+                                <% } %>
                                 <input name="Description" id="Description"  class="form-input" value="<%= product.Description %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="Price" class="form-label">Precio del producto:</label>
+                                <% if (session.errors && session.errors.Price) { %>
+                                    <p class="feedback" style="color: firebrick"><%= session.errors.Price.msg %></p>
+                                <% } %>
                                 <input type="text" id="Price" name="Price"  class="form-input" value="<%= product.Price %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="Link" class="form-label">Link del video:</label>
+                                <% if (session.errors && session.errors.Link) { %>
+                                    <p class="feedback" style="color: firebrick"><%= session.errors.Link.msg %></p>
+                                <% } %>
                                 <input type="text" id="Link" name="Link" class="form-input" value="<%= product.Link %>">
                             </div>
                             <div class="col-12">

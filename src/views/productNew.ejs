@@ -31,23 +31,38 @@
                         <div class="row product-detail">
                             <div class="col-12 col-md-6">
                                 <label for="FirstName" class="form-label">Nombre del producto:</label>
+                                <%if(locals.errors && errors.FirstName){%>
+                                    <p class= "feedback"style="color: firebrick"> <%=errors.FirstName.msg %> </p>
+                                <% } %>
                                 <input type="text" id="FirstName" name="FirstName" placeholder="Ingrese nombre" class="form-input" value="<%=locals.old&&old.FirstName%>">
                                 
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="FirstDescription" class="form-label">Titulo:</label>
+                                <%if(locals.errors && errors.FirstDescription){%>
+                                    <p class= "feedback"style="color: firebrick"> <%=errors.FirstDescription.msg %> </p>
+                                <% } %>
                                 <input type="text" id="FirstDescription" name="FirstDescription" placeholder="Ingrese nombre" class="form-input" value="<%=locals.old&&old.FirstDescription%>">
                             </div>
                             <div class="col-12">
                                 <label for="Description" class="form-label">Descripción:</label>
+                                <%if(locals.errors && errors.Description){%>
+                                    <p class= "feedback"style="color: firebrick"> <%=errors.Description.msg %> </p>
+                                <% } %>
                                 <input id="Description" name="Description"  placeholder="Ingrese descripcion" class="form-input" value="<%=locals.old&&old.Description%>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="Price" class="form-label">Precio del producto:</label>
+                                <%if(locals.errors && errors.Price){%>
+                                    <p class= "feedback"style="color: firebrick"> <%=errors.Price.msg %> </p>
+                                <% } %>
                                 <input type="number" id="Price" name="Price" placeholder="Ingrese precio" class="form-input" value="<%=locals.old&&old.Price%>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="Link" class="form-label">Link del video:</label>
+                                <%if(locals.errors && errors.Link){%>
+                                    <p class= "feedback"style="color: firebrick"> <%=errors.Link.msg %> </p>
+                                <% } %>
                                 <input type="text" id="Link" name="Link" placeholder="Ingrese link" class="form-input" value="<%=locals.old&&old.Link%>">
                             </div>
                             <div class="col-12">
