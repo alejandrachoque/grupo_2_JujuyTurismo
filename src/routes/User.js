@@ -8,12 +8,13 @@ const Login = require('../middlewares/validacionesLogin');
 const usuarioLogueado = require('../middlewares/logueado')
 const usuarioNoLogueado = require('../middlewares/noLogueado')
 const validaciones= require('../middlewares/validacionesRegistro')
+const validacionesRegistro = require('../middlewares/validacionesRegistroEdit')
 router.get('/',usuarioLogueado,userController.register)
 
 router.post('/',uploadUser.single('perfil'),validaciones,userController.userNew)
 
 router.get('/editar/:id', userController.editar )
-router.put('/editar/:id', userController.actualizar)
+router.put('/editar/:id',validacionesRegistro, userController.actualizar)
 
 router.get('/login',usuarioLogueado,userController.login)
 router.post('/login',Login,userController.entrar)

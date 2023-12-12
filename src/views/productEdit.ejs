@@ -25,7 +25,7 @@
     <section class="home" id="home">
         <div class="box secondDetalle"
             style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat; justify-content: center;">
-            <div class="content">
+            <div class="content contentc" style="margin-top: 75px;">
                 <div class="col-12">
                     <form action="/product/editar/<%= product.id %>?_method=PUT" method="post" id="producto" class="formulario" enctype="multipart/form-data">
                         <div class="row product-detail">
@@ -54,14 +54,15 @@
                                 <% if (session.errors && session.errors.Imagen) { %>
                                     <p class="feedback" style="color: firebrick"><%= session.errors.Imagen.msg %></p>
                                 <% } %>
-                                <input type="file" id="Imagen" name="Imagen"  class="btn"  >
+                                <input type="file" id="Imagen" name="Imagen"  class="btn"  value="<%= product ? product.Imagen : '' %>">
+                                
                             </div>
                            
                             <div class="col-12">
                                 <button type="submit" class="btn">Editar producto</button>
                             </div>
                             
-                    </div>  <div class="alerta">
+                    </div>  <div class="alerta" style="font-size: medium;">
                                 <ul>
                                     
                                 </ul> </div>

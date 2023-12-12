@@ -87,15 +87,26 @@ const userController={
 
     },
     actualizar: async (req,res) => {
-      
-
-        await db.User.update( {FirstName: req.body.Nombre,
+        const u = await req.session.userLogged
+        const errors= validationResult(req)
+        if(errors.isEmpty()){
+          await db.User.update( {FirstName: req.body.Nombre,
                                LastName: req.body.Apellido,
                                Password: bcrypt.hashSync(req.body.password,10) },
                             { where: {id: req.params.id}}) 
         //
       
-        res.redirect('/register/perfil')
+        res.redirect('/register/perfil')   
+        }else{
+            res.render('registerEdit',{
+                u,
+                errors:errors.mapped(),
+                old:req.body,
+                session: req.session
+            })
+        }
+
+       
         
     },
 
