@@ -95,7 +95,8 @@ const userController={
                                Password: bcrypt.hashSync(req.body.password,10) },
                             { where: {id: req.params.id}}) 
         //
-      
+        const updatedUser = await db.User.findByPk(req.params.id);
+        req.session.userLogged = updatedUser;
         res.redirect('/register/perfil')   
         }else{
             res.render('registerEdit',{
