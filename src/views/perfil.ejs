@@ -33,8 +33,10 @@
                                 <p>email:  <%= user.Email %> </p>  
                             </article>   
                             <a href="/register/editar/<%=user.id%>" class="btn">Editar Datos del usuario</a>
+                            <br>
                             <a href="/register/logout" class="btn">Salir</a>
                             <% if (session.userLogged.Email =='admin@admin.com') { %>
+                                <br>
                             <a href="/product/crear" class="btn">Agregar producto</a>
                             <%}%>
                         </div>

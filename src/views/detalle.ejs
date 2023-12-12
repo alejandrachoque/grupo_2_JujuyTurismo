@@ -25,10 +25,12 @@
     <section class="home" id="home">
                     <div class="box secondDetalle"
                         style="background: url(https://i.gyazo.com/897344247eac255f3e3707c1a2374384.jpg) no-repeat;">
-                        <div class="content">
+                        <div class="content enmedia contentc">
                             <span><%= product.FirstName %></span>
+                            <br>
                             <p>
                                 <%= product.Description %>
+                                <br>
                                 <br>
                                 ¡A tan solo: <%= product.Price %>$!
                             </p>
@@ -48,7 +50,7 @@
                                 
 
                         </div>
-                        <div class="content">
+                        <div class="content contentc">
                                 <iframe class="video" src="<%= product.Link %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>

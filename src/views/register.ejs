@@ -45,17 +45,17 @@
             <input type="email" name="email" id="email" placeholder="E-mail" value="<%=locals.old&&old.email%>">
            
             <%if(locals.errors && errors.email){%>
-                <p class= "feedback" style="color: firebrick"><%= errors.email.msg %> </p>
+                <p class= "feedback" style="color: firebrick; font-size: medium;"><%= errors.email.msg %> </p>
             <% } %>
             <label for="email"></label>
             
             <input type="password" name="password" placeholder="Contraseña" id="contraseña">
-            <div class="alerta">
+            <div class="alerta" style="font-size: medium;">
                 <ul>
                     
                 </ul> </div>
             <%if(locals.errors && errors.password){%>
-                <p class= "feedback"style="color: firebrick"> <%=errors.password.msg %> </p>
+                <p class= "feedback"style= "color: firebrick"> <%=errors.password.msg %> </p>
             <% } %>
             <label for="contraseña"></label>
 

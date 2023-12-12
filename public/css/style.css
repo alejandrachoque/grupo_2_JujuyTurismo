@@ -76,7 +76,7 @@ form#registro button{
     padding: 4px;
     width: 70vw;
     max-width: 300px;
-}
+} 
 form#registro button:hover{
     background-color: green;
     color: white;
@@ -125,6 +125,7 @@ div.log{
         
 }
 }
+
 
 @media (max-width:479px){
   

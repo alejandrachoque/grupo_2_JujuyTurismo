@@ -47,7 +47,7 @@ section {
   border: var(--border);
   color: var(--blanco-suave);
   cursor: pointer;
-  background: none;
+  background: rgb(18, 73, 1);
   font-size: 1.5rem;
   padding: 1rem 3rem;
 }
@@ -246,7 +246,7 @@ section {
 }
 .home .box .contentc h3 {
   font-size: 6rem;
-  color: var(--verde);
+  color: white;
   padding-top: 2rem;
   text-transform: uppercase;
   text-shadow: 3px 3px 3px var(--negro);
@@ -513,7 +513,7 @@ div.reg h1.mensaj{
   color:  white;
 }
 }
-@media(min-width:480px){
+@media(min-width:240px){
     div.regitr{
         
         
@@ -534,6 +534,14 @@ div.log{
 }
 .home .box .contentc{
   padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 760px){
+  .enmedia{
+    margin-top: 60px;
+  }
 }
 
 }
@@ -883,5 +891,5 @@ p strong{
         
         
     .home .box .contentc p{
-      color: salmon
+      color: white
     }
